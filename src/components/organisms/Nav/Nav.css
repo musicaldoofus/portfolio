@@ -5,6 +5,9 @@
 	flex-direction: row;
 	justify-content: space-between;
 	height: 64px;
+	background-color: #ededed;
+	box-shadow: 0 2px 5px -3px rgba(0, 0, 0, 0.2);
+	border-bottom: 1px solid rgba(110, 107, 107, 0.1);
 }
 .nav-link {
 	margin: 0;

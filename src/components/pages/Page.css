@@ -1,9 +1,32 @@
 /*Page.css*/
 .page {
+	height: inherit;
 	display: flex;
 	flex-direction: column;
+	background: rgb(232,231,231);
+	background: radial-gradient(circle, rgba(232,231,231,1) 0%, rgba(255,255,255,1) 100%);
 }
 main {
     margin: 64px auto;
 	max-width: 75%;
+	min-width: 320px;
+}
+.flex-div {
+	display: flex;
+	flex-direction: row;
+	flex-overflow: overflow;
+	margin: 64px 0 auto 0;
+}
+@media only screen and (max-width: 720px) {
+	.flex-div {
+		flex-direction: column;
+	}
+	.flex-div > div {
+		width: 100%;
+	}
+}
+.flex-div > div {
+	margin: auto;
+	width: 45%;
+	min-width: 320px;
 }

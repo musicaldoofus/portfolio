@@ -39,7 +39,7 @@ class Nav extends Component {
 		const GhBtn = <Icon to={githubProfile} iconType="github" imgSrc={githubLogo}/>;
 		const LiBtn = <Icon to={linkedInProfile} iconType="linkedIn" imgSrc={linkedInLogo}/>;
 		return (
-			<nav className="nav" role="navigation" id="nav">
+			<nav name="navigation bar" className="nav" role="navigation" id="nav">
 				{HomeBtn}
 				<div>
 					{AboutBtn}
