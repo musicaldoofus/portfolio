@@ -4,8 +4,7 @@ import routes from './utils/routes';
 import './App.css';
 
 function App() {
-	const appRoutes = routes.map(r => <Route key={r.to} {...r}/>);
-	console.log(appRoutes);
+	const appRoutes = routes.map(r => <Route key={r.path} {...r}/>);
 	return (
 		<Router>
 			<Switch>
