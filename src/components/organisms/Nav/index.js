@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { P } from '../../atoms/Text';
 import './Nav.css';
+import githubLogo from '../../../media/svg/github-mark.svg';
+import linkedInLogo from '../../../media/svg/linkedin-bug.svg';
 
 const githubProfile = 'https://github.com/musicaldoofus';
 const linkedInProfile = '';
@@ -10,7 +13,7 @@ const NavLink = ({to, children, label}) => {
 	const isActive = to === '/' ? href === '' || href === '/' : href.indexOf(to) > -1;
 	return (
 		<Link to={to} className={`nav-link ${isActive ? 'active' : ''}`}>
-			<div>{children ? children : label}</div>
+			<div><P size="sm" className="bold">{children ? children : label}</P></div>
 		</Link>
 	);
 }
@@ -33,8 +36,8 @@ class Nav extends Component {
 		const HomeBtn = <NavLink to="/">re:learn</NavLink>;
 		const AboutBtn = <NavLink to="/about">about</NavLink>;
 		const WorkBtn = <NavLink to="/work">work</NavLink>;
-		const GhBtn = <Icon to={githubProfile} iconType="github" img={undefined}/>;
-		const LiBtn = <Icon to={linkedInProfile} iconType="linkedIn" img={undefined}/>;
+		const GhBtn = <Icon to={githubProfile} iconType="github" imgSrc={githubLogo}/>;
+		const LiBtn = <Icon to={linkedInProfile} iconType="linkedIn" imgSrc={linkedInLogo}/>;
 		return (
 			<nav className="nav" role="navigation" id="nav">
 				{HomeBtn}

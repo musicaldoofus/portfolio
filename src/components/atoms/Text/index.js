@@ -10,8 +10,8 @@ const H = ({size, children}) => {
 	if (size === 'xsm') return <h5>{children}</h5>;
 };
 
-const P = ({size, children}) => (
-	<p className={`para ${size ? size : 'md'}`}>{children}</p>
+const P = ({size, children, className}) => (
+	<p className={`para ${size ? size + ' ' : ''}${className ? className : ''}`}>{children}</p>
 );
 
 export default H;

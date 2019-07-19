@@ -4,6 +4,7 @@
 	width: 100%;
 	flex-direction: row;
 	justify-content: space-between;
+	height: 64px;
 }
 .nav-link {
 	margin: 0;
@@ -17,6 +18,9 @@
 .nav-link > div {
 	opacity: inherit;
 	margin: auto 8px;
+}
+.nav-link > div > a {
+	font-family: 'Poppins';
 }
 .nav-link:hover {
 	border-bottom: 1px solid black;

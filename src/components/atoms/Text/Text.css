@@ -1,28 +1,52 @@
 /*Text.css*/
 h1, h2, h3, h4, h5 {
-
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	transition: all ease 0.2s;
 }
 h1 {
-
+	font-size: 64px;
 }
 h2 {
-
+	font-size: 40px;
 }
 h3 {
-
+	font-size: 32px;
 }
 h4 {
-
+	font-size: 24px;
 }
 h5 {
-
+	font-size: 20px;
 }
 p {
-
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
 }
 p.sm {
-
+	font-size: 14px;
 }
 p.md {
-
+	font-size: 20px;
+}
+@media only screen and (max-width: 720px) {
+	h1 {
+		font-size: 40px;
+	}
+	h2 {
+		font-size: 32px;
+	}
+	h3 {
+		font-size: 24px;
+	}
+	h4 {
+		font-size: 20px;
+	}
+	h5 {
+		font-size: 18px;
+	}
+}
+p.bold {
+	font-weight: 700;
 }

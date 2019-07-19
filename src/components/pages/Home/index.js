@@ -10,7 +10,7 @@ const Home = () => {
 			
 			</div>
 			<div>
-				<H size="xlg">Let's work together.</H>
+				<H size="xlg">Let's work together. Sometimes I just spill my guts, ya know????????!!!!!</H>
 				<P>I'm a learning design professional with blah blah who cares, am I right</P>
 			</div>
 		</Page>
