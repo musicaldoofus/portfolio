@@ -1,0 +1,5 @@
+/*Page.css*/
+.page {
+	display: flex;
+	flex-direction: column;
+}

@@ -1,0 +1,13 @@
+/*Button.css*/
+.btn {
+	display: flex;
+	margin: auto;
+	outline: 1px transparent;
+	transition: all ease 0.2s;
+}
+.btn:hover {
+
+}
+.btn:active, btn:focus {
+	outline: 1px solid blue;
+}

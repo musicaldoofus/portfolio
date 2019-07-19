@@ -1,0 +1,39 @@
+/*Nav.css*/
+.nav {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.nav-link {
+	margin: 0;
+	transition: all ease 0.2s;
+	border-bottom: 1px solid transparent;
+	cursor: pointer;
+	opacity: 0.8;
+	text-decoration: none;
+	display: flex;
+}
+.nav-link > div {
+	opacity: inherit;
+	margin: auto 8px;
+}
+.nav-link:hover {
+	border-bottom: 1px solid black;
+	opacity: 1.0;
+}
+nav > div {
+	display: flex;
+	flex-overflow: overflow;
+}
+.icon {
+	border-radius: 500px;
+	min-width: 40px;
+	min-height: 40px;
+}
+.icon.github {
+	
+}
+.icon.linkedIn {
+	
+}
