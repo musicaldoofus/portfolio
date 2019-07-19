@@ -1,3 +1,3 @@
 ## Portfolio
 
-[Demo here](https://github.com/musicaldoofus/portfolio)
+[Demo here](https://musicaldoofus.github.io/portfolio/)

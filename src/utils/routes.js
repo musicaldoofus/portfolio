@@ -15,6 +15,11 @@ const routes = [
 		render: (props) => <About {...props}/>
 	},
 	{
+		path: '',
+		exact: true,
+		render: (props) => <Home {...props}/>
+	},
+	{
 		path: '/',
 		exact: true,
 		render: (props) => <Home {...props}/>

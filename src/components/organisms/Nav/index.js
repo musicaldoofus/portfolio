@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Nav.css';
 
-const githubProfile = '';
+const githubProfile = 'https://github.com/musicaldoofus';
 const linkedInProfile = '';
 
 const NavLink = ({to, children, label}) => {
