@@ -28,8 +28,19 @@ class Nav extends Component {
 	constructor() {
 		super();
 		this.state = {
-			activePageIndex: 0
+			activePageIndex: 0,
+			isScrolledDown: false
 		};
+		this.handleScroll = this.handleScroll.bind(this);
+	}
+	
+	handleScroll() {
+		if (document.body.scrollTop > 64 || document.documentElement.scrollTop > 64) this.setState({isScrolledDown: true});
+		else this.setState({isScrolledDown: false});
+	}
+	
+	componentDidMount() {
+		window.onscroll = () => this.handleScroll();
 	}
 	
 	render() {
@@ -38,8 +49,9 @@ class Nav extends Component {
 		const WorkBtn = <NavLink to="/work">work</NavLink>;
 		const GhBtn = <Icon to={githubProfile} iconType="github" imgSrc={githubLogo}/>;
 		const LiBtn = <Icon to={linkedInProfile} iconType="linkedIn" imgSrc={linkedInLogo}/>;
+		const navClassNames = `nav box-shadow${this.state.isScrolledDown ? ' sm' : ' md'}`;
 		return (
-			<nav name="navigation bar" className="nav" role="navigation" id="nav">
+			<nav name="navigation bar" className={navClassNames} role="navigation" id="nav">
 				{HomeBtn}
 				<div>
 					{AboutBtn}

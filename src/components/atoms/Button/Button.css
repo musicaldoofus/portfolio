@@ -2,12 +2,25 @@
 .btn {
 	display: flex;
 	margin: auto;
-	outline: 1px transparent;
+	outline: 1px solid transparent;
+	transition: all ease 0.2s;
+	cursor: pointer;
+	font-family: 'Poppins', sans-serif;
+	border-radius: 1000px;
+	padding: 8px 24px;
+	border: none;
+    background-color: #1abc9c;
+    color: #fff;
+	font-size: 16px;
+    max-width: 240px;
 	transition: all ease 0.2s;
 }
 .btn:hover {
-
+	background-color: #16a085;
 }
 .btn:active, btn:focus {
-	outline: 1px solid blue;
+	outline: 2px solid #117D67;
+}
+.btn.dark {
+	
 }

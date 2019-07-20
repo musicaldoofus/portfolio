@@ -1,11 +1,10 @@
 import React from 'react';
-import { P } from '../Text';
 import './Button.css';
 
-const Button = ({id, onClick, label, children, contextStyle}) => {
+const Button = ({id, onClick, label, children, style}) => {
 	return (
-		<button className="btn" role="button" id={id} onClick={onClick} contextStyle={contextStyle ? contextStyle : {}}>
-			<P>{children ? children : label}</P>
+		<button className="btn" id={id} onClick={onClick} style={style ? style : {}}>
+			{children ? children : label}
 		</button>
 	);
 }

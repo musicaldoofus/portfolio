@@ -1,15 +1,21 @@
-import React from 'react';
-import Page from '../';
-import H, { P } from '../../atoms/Text';
+import React, { Fragment } from 'react';
+import { Route } from 'react-router-dom';
+import WorkHome from './WorkHome';
+import WorkPage from './WorkPage';
 
-const Work = () => {
+const Work = (props) => {
 	return (
-		<Page>
-			<div>
-				<H size="xlg">Learning should be delightful.</H>
-				<P>Click on a project to learn more.</P>
-			</div>
-		</Page>
+		<Fragment>
+			<Route
+				exact
+				path={props.match.url}
+				component={WorkHome}
+			/>
+			<Route
+				path={`${props.match.url}/:id`}
+				component={WorkPage}
+			/>
+		</Fragment>
 	);
 }
 

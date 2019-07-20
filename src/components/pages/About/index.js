@@ -1,41 +1,53 @@
 import React from 'react';
 import Page from '../';
-import H, { P } from '../../atoms/Text';
+import H, { P, HR } from '../../atoms/Text';
+import Button from '../../atoms/Button';
 import './About.css';
+import profilePic from '../../../media/svg/mb_portrait_flat_monochrome.svg';
 
 const skills = [
 	'JavaScript',
 	'HTML',
 	'CSS',
-	'Accessibility'
+	'Accessibility',
+	'Learning Experience Design',
+	'Powerpoint',
+	'Storyline',
+	'Adobe CC'
 ];
 
 const About = ({match}) => {
-	const skillsList = skills.map(s => <div key={s} className="pill">{s}</div>);
+	const skillsList = skills.map(s => <div key={s} className="pill"><span>{s}</span></div>);
+	const emailUrl = 'mailto:burns.trainingdesign@gmail.com';
 	return (
 		<Page>
 			<div className="flex-div">
 				<div className="photo">
-					<img alt="Contact me to learn more" src="https://lakewangaryschool.sa.edu.au/wp-content/uploads/2017/11/placeholder-profile-sq.jpg"/>
-					<P>e: <a href="mailto:burns.trainingdesign@gmail.com">burns.trainingdesign@gmail.com</a></P>
+					<img alt="Contact me to learn more" src={profilePic}/>
+					<Button style={{marginTop: '24px'}} onClick={() => window.open(emailUrl)}>Let's get in touch.</Button>
 				</div>
-				<div style={{paddingLeft: '24px'}}>
+				<div>
 					<H size="xlg">I like to learn.</H>
 					<P>
 						Curabitur libero ligula, mollis id feugiat eu, sagittis in ex. Maecenas aliquet felis quis massa fermentum, malesuada convallis felis sodales. Aenean convallis lacus vel odio fringilla varius. Fusce tincidunt mollis dui. Nullam vitae tincidunt purus, et tempor nunc. Aliquam nec leo libero. Sed dui arcu, rhoncus eget magna eget, tincidunt rutrum est.
 					</P>
 				</div>
 			</div>
-			<div className="flex-div">
-				<div>
+			<div className="flex-div" style={{paddingTop: '80px', alignItems: 'flex-start'}}>
+				<div style={{marginTop: 0}}>
 					<H size="lg">My skills</H>
+					<HR/>
 					<div className="pill-container">
 						{skillsList}
 					</div>
-				</div>
-				<div>
+				</div>	
+				<div style={{marginTop: 0}}>
 					<H size="lg">My resume</H>
-					<P></P>
+					<HR/>
+					<div style={{display: 'flex'}}>
+						<Button id="download-resume-pdf" onClick={() => console.log('downloaded')}>View and download PDF</Button>
+						<Button id="download-resume-text-only" onClick={() => console.log('downloaded')}>Download Text only</Button>
+					</div>
 				</div>
 			</div>
 		</Page>

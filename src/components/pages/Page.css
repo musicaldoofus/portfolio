@@ -1,10 +1,7 @@
 /*Page.css*/
 .page {
-	height: inherit;
-	display: flex;
-	flex-direction: column;
 	background: rgb(232,231,231);
-	background: radial-gradient(circle, rgba(232,231,231,1) 0%, rgba(255,255,255,1) 100%);
+	padding-top: 80px;
 }
 main {
     margin: 64px auto;
@@ -15,7 +12,6 @@ main {
 	display: flex;
 	flex-direction: row;
 	flex-overflow: overflow;
-	margin: 64px 0 auto 0;
 }
 @media only screen and (max-width: 720px) {
 	.flex-div {
@@ -23,6 +19,7 @@ main {
 	}
 	.flex-div > div {
 		width: 100%;
+		padding-bottom: 24px;
 	}
 }
 .flex-div > div {

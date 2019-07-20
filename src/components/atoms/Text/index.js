@@ -14,5 +14,7 @@ const P = ({size, children, className}) => (
 	<p className={`para ${size ? size + ' ' : ''}${className ? className : ''}`}>{children}</p>
 );
 
+const HR = () => <hr/>;
+
 export default H;
-export { P };
+export { P, HR };

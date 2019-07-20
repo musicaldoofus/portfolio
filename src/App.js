@@ -1,15 +1,27 @@
 import React from 'react';
 import { HashRouter, Switch, Route } from 'react-router-dom';
-import routes from './utils/routes';
+import Home from './components/pages/Home';
+import About from './components/pages/About';
+import Work from './components/pages/Work';
 import './App.css';
 
 function App() {
-	const appRoutes = routes.map(r => <Route key={r.path} {...r}/>);
-	console.log(appRoutes);
 	return (
-		<HashRouter>
+		<HashRouter onUpdate={() => window.scrollTo(0, 0)}>
 			<Switch>
-				{appRoutes}
+				<Route
+					exact
+					path="/"
+					component={Home}
+				/>
+				<Route
+					path="/work"
+					component={Work}
+				/>
+				<Route
+					path="/about"
+					component={About}
+				/>
 			</Switch>
 		</HashRouter>
 	);

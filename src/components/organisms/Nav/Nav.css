@@ -5,16 +5,33 @@
 	flex-direction: row;
 	justify-content: space-between;
 	height: 64px;
-	background-color: #ededed;
-	box-shadow: 0 2px 5px -3px rgba(0, 0, 0, 0.2);
+	background-color: #fff;
+	box-shadow: 0 2px 6px -1px #7f8c8d;
 	border-bottom: 1px solid rgba(110, 107, 107, 0.1);
+	transition: all ease 0.2s;
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+}
+.nav a:first-child {
+	margin-left: 16px;
+}
+.nav div:last-child {
+	margin-right: 16px;
+}
+.nav.md {
+	height: 64px;
+}
+.nav.sm {
+	height: 40px;
 }
 .nav-link {
 	margin: 0;
 	transition: all ease 0.2s;
 	border-bottom: 1px solid transparent;
 	cursor: pointer;
-	opacity: 0.8;
+	opacity: 0.9;
 	text-decoration: none;
 	display: flex;
 }
@@ -25,22 +42,31 @@
 .nav-link > div > a {
 	font-family: 'Poppins';
 }
-.nav-link:hover {
-	border-bottom: 1px solid black;
-	opacity: 1.0;
+.nav-link p {
+	color: #2c3e50;
 }
-nav > div {
-	display: flex;
-	flex-overflow: overflow;
+.nav-link:hover, .nav-link.active {
+	border-bottom: 1px solid #2c3e50;
+	opacity: 1.0;
+	border-radius: 2px;
+}
+.nav > div {
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	grid-gap: 16px;
 }
 .icon {
 	border-radius: 500px;
 	min-width: 40px;
 	min-height: 40px;
+	display: flex;
+	transition: all ease 0.2s;
 }
-.icon.github {
-	
+.icon:hover {
+	transform: scale(1.1);
 }
-.icon.linkedIn {
-	
+.nav.sm > div > .icon {
+	min-width: 24px;
+	min-height: 24px;
+	margin: 0 8px;
 }
