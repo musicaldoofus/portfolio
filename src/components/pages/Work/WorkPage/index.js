@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import Page from '../../../pages';
 import H, { P } from '../../../atoms/Text';
 import projects from '../projects';
@@ -11,6 +11,9 @@ const WorkPage = (props) => {
 	let { title, description, imgSrc, imgSrcAlt } = project;
 	return (
 		<Page className="work-page">
+			<div className="work-page-back">
+				<Link to="/work">&larr;  back</Link>
+			</div>
 			<div>
 				<H size="xlg">{title}</H>
 				<P>{description}</P>

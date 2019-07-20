@@ -1,7 +1,7 @@
 /*Button.css*/
 .btn {
 	display: flex;
-	margin: auto;
+	margin: 0 8px;
 	outline: 1px solid transparent;
 	transition: all ease 0.2s;
 	cursor: pointer;
@@ -12,8 +12,9 @@
     background-color: #117D67;
     color: #fff;
 	font-size: 16px;
-    max-width: 240px;
+    max-width: 200px;
 	transition: all ease 0.2s;
+	min-width: 120px;
 }
 .btn:hover {
 	background-color: #16a085;

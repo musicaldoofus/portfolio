@@ -24,7 +24,7 @@ const About = ({match}) => {
 			<div className="flex-div">
 				<div className="photo">
 					<img alt="Contact me to learn more" src={profilePic}/>
-					<Button style={{marginTop: '24px'}} onClick={() => window.open(emailUrl)}>Let's get in touch.</Button>
+					<Button style={{margin: '24px auto 0 auto'}} onClick={() => window.open(emailUrl)}>Let's get in touch.</Button>
 				</div>
 				<div>
 					<H size="xlg">I like to learn.</H>
@@ -40,12 +40,12 @@ const About = ({match}) => {
 					<div className="pill-container">
 						{skillsList}
 					</div>
-				</div>	
+				</div>
 				<div style={{marginTop: 0}}>
 					<H size="lg">My resume</H>
 					<HR/>
 					<div style={{display: 'flex'}}>
-						<Button id="download-resume-pdf" onClick={() => console.log('downloaded')}>View and download PDF</Button>
+						<Button id="download-resume-pdf" style={{flexGrow: 1}} onClick={() => console.log('downloaded')}>View and download PDF</Button>
 						<Button id="download-resume-text-only" onClick={() => console.log('downloaded')}>Download Text only</Button>
 					</div>
 				</div>

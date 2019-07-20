@@ -9,8 +9,9 @@
 	border-radius: 1000px;
 	min-width: 320px;
 	max-width: 400px;
-	height: 100%;
+	height: 82%;
 	margin: 0 auto 24px auto;
+	max-height: 320px;
 }
 .photo > p {
 	margin: auto;
