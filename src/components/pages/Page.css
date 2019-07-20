@@ -1,12 +1,15 @@
 /*Page.css*/
 .page {
 	background: rgb(232,231,231);
-	padding-top: 80px;
+	padding-top: 64px;
+	position: relative;
+	min-height: 100vh;
 }
 main {
-    margin: 64px auto;
+    margin: 64px auto 0 auto;
 	max-width: 75%;
 	min-width: 320px;
+	padding-bottom: 160px;
 }
 .flex-div {
 	display: flex;

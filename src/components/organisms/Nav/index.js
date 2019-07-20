@@ -51,7 +51,7 @@ class Nav extends Component {
 		const LiBtn = <Icon to={linkedInProfile} iconType="linkedIn" imgSrc={linkedInLogo}/>;
 		const navClassNames = `nav box-shadow${this.state.isScrolledDown ? ' sm' : ' md'}`;
 		return (
-			<nav name="navigation bar" className={navClassNames} role="navigation" id="nav">
+			<nav name="navigation bar" className={navClassNames} role="navigation" id="nav-bar">
 				{HomeBtn}
 				<div>
 					{AboutBtn}

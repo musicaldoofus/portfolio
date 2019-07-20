@@ -7,7 +7,7 @@ const Page = ({children, className}) => {
 	return (
 		<div className={`page${className ? ' ' + className : ''}`}>
 			<Nav/>
-			<main className="fade-in" role="main">
+			<main id="main" className="fade-in" role="main">
 				{children}
 			</main>
 			<Footer/>

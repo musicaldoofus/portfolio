@@ -12,10 +12,10 @@ const WorkPage = (props) => {
 	return (
 		<Page className="work-page">
 			<div>
-				<H size="lg">{title}</H>
+				<H size="xlg">{title}</H>
 				<P>{description}</P>
 			</div>
-			<div>
+			<div className="work-page-img">
 				<img alt={imgSrcAlt} src={imgSrc}/>
 			</div>
 		</Page>
