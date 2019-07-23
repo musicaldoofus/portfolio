@@ -1,24 +1,20 @@
 /*Nav.css*/
-.nav {
-	display: flex;
+nav {
 	width: 100%;
+	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
-	height: 64px;
 	background-color: #fff;
-	box-shadow: 0 2px 6px -1px #7f8c8d;
-	border-bottom: 1px solid rgba(110, 107, 107, 0.1);
 	transition: all ease 0.2s;
 	position: fixed;
 	z-index: 1000;
 	top: 0;
 	left: 0;
 }
-.nav a:first-child {
-	margin-left: 16px;
-}
-.nav div:last-child {
-	margin-right: 16px;
+.nav-bar-inner-container {
+	max-width: 64rem;
+	display: flex;
+	flex-grow: 1;
+	margin: 0 auto;
 }
 .nav.md {
 	height: 64px;
@@ -34,26 +30,33 @@
 	opacity: 0.9;
 	text-decoration: none;
 	display: flex;
+	width: 64px;
 }
 .nav-link > div {
+	display: flex;
+	width: 100%;
+}
+.nav-link > div > div {
 	opacity: inherit;
 	margin: auto 8px;
 }
-.nav-link > div > a {
-	font-family: 'Poppins';
+.nav-link a {
+	font-family: 'Montserrat';
 }
 .nav-link p {
 	color: #2c3e50;
+	margin: auto;
 }
 .nav-link:hover, .nav-link.active {
 	border-bottom: 1px solid #2c3e50;
 	opacity: 1.0;
 	border-radius: 2px;
 }
-.nav > div {
+.nav-bar-inner-container > div {
 	display: grid;
-	grid-template-columns: auto auto auto auto;
+	grid-template-columns: repeat(5, auto);
 	grid-gap: 16px;
+	margin-left: auto;
 }
 .icon {
 	border-radius: 500px;
@@ -62,11 +65,16 @@
 	display: flex;
 	transition: all ease 0.2s;
 }
+.icon > div {
+	width: 40px;
+	margin: auto;
+}
 .icon:hover {
 	transform: scale(1.1);
 }
-.nav.sm > div > .icon {
-	min-width: 24px;
-	min-height: 24px;
-	margin: 0 8px;
+nav > div > div > .icon > div {
+	transition: all ease 0.2s;
+}
+nav.sm > div > div > .icon > div {
+	width: 24px;
 }

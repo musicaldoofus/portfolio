@@ -19,8 +19,8 @@ const NavLink = ({to, children, label}) => {
 }
 
 const Icon = ({to, iconType, imgSrc}) => (
-	<a aria-label={`Visit my ${iconType} profile`} href={to} className={`icon ${iconType}`}>
-		<img alt={`link to ${iconType}`} src={imgSrc}/>
+	<a aria-label={`Visit my ${iconType} profile`} href={to} className={`nav-link icon ${iconType}`}>
+		<div><img alt={`link to ${iconType}`} src={imgSrc}/></div>
 	</a>
 );
 
@@ -47,17 +47,20 @@ class Nav extends Component {
 		const HomeBtn = <NavLink to="/">re:learn</NavLink>;
 		const AboutBtn = <NavLink to="/about">about</NavLink>;
 		const WorkBtn = <NavLink to="/work">work</NavLink>;
+		const ContactBtn = <NavLink to="/contact">contact</NavLink>;
 		const GhBtn = <Icon to={githubProfile} iconType="github" imgSrc={githubLogo}/>;
 		const LiBtn = <Icon to={linkedInProfile} iconType="linkedIn" imgSrc={linkedInLogo}/>;
-		const navClassNames = `nav box-shadow${this.state.isScrolledDown ? ' sm' : ' md'}`;
+		const navClassNames = `nav${this.state.isScrolledDown ? ' box-shadow sm' : ' md'}`;
 		return (
 			<nav name="navigation bar" className={navClassNames} role="navigation" id="nav-bar">
-				{HomeBtn}
-				<div>
-					{AboutBtn}
-					{WorkBtn}
-					{GhBtn}
-					{LiBtn}
+				<div className="nav-bar-inner-container">
+					<div>
+						{AboutBtn}
+						{WorkBtn}
+						{ContactBtn}
+						{GhBtn}
+						{LiBtn}
+					</div>
 				</div>
 			</nav>
 		);

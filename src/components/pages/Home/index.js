@@ -1,20 +1,31 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Page from '../';
 import H, { P } from '../../atoms/Text';
 import './Home.css';
 
-const Home = () => {
-	return (
-		<Page className="home">
-			<div className="svg-animation-container">
-			
-			</div>
-			<div>
-				<H size="xlg">Let's work together. Sometimes I just spill my guts, ya know????????!!!!!</H>
-				<P>I'm a learning design professional with blah blah who cares, am I right</P>
-			</div>
-		</Page>
-	);
+class Home extends Component {
+	constructor() {
+		super();
+		this.state = {
+			verb: 'design'
+		};
+	}
+	
+	componentDidMount() {
+		
+	}
+	
+	render () {
+		return (
+			<Page className="home">
+				<div>
+					<H size="xlg">Hey there.</H>
+					<H size="md">I {this.state.verb}</H>
+					<P>I'm a learning design professional with blah blah who cares, am I right</P>
+				</div>
+			</Page>
+		);
+	}
 }
 
 export default Home;

@@ -1,26 +1,30 @@
 import React from 'react';
-import { HashRouter, Switch, Route } from 'react-router-dom';
-import Home from './components/pages/Home';
+import { HashRouter, Switch, Route, Redirect } from 'react-router-dom';
 import About from './components/pages/About';
 import Work from './components/pages/Work';
+import Contact from './components/pages/Contact';
 import './App.css';
 
 function App() {
 	return (
-		<HashRouter onUpdate={() => window.scrollTo(0, 0)}>
+		<HashRouter>
 			<Switch>
 				<Route
 					exact
 					path="/"
-					component={Home}
+					render={() => <Redirect to="/about"/>}
+				/>
+				<Route
+					path="/about"
+					component={About}
 				/>
 				<Route
 					path="/work"
 					component={Work}
 				/>
 				<Route
-					path="/about"
-					component={About}
+					path="/contact"
+					component={Contact}
 				/>
 			</Switch>
 		</HashRouter>
