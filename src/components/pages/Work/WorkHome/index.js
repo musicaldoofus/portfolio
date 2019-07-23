@@ -10,7 +10,7 @@ const WorkHome = (props) => {
 	return (
 		<Page>
 			<div>
-				<H size="xlg">Learning should be delightful.</H>
+				<H size="xlg">I like to build things.</H>
 				<P>Click on a project to learn more.</P>
 			</div>
 			<div className="projects">
