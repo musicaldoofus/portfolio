@@ -1,17 +1,13 @@
 import React from 'react';
-import Nav from '../organisms/Nav';
-import Footer from '../organisms/Footer';
 import './Page.css';
 
 const Page = ({children, className}) => {
 	return (
-		<div className={`page${className ? ' ' + className : ''}`}>
-			<Nav/>
-			<main id="main" className="fade-in" role="main">
+		<main id="main" className={`page${className ? ' ' + className : ''}`} role="main">
+			<div>
 				{children}
-			</main>
-			<Footer/>
-		</div>
+			</div>
+		</main>
 	);
 }
 

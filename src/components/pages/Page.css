@@ -1,35 +1,17 @@
 /*Page.css*/
 .page {
-	background: #fbfbf8;
-	padding-top: 64px;
 	position: relative;
 	min-height: 100vh;
+	z-index: 2;
 }
 main {
-	max-width: 64rem;
-    margin: 64px auto 0 auto;
-	padding-bottom: 160px;
+    display: flex;
 }
-.flex-div {
-	display: flex;
-	flex-direction: row;
-	flex-overflow: overflow;
-}
-.flex-div > div {
+main > div {
 	margin: auto;
-	width: 45%;
-	min-width: 320px;
 }
-@media only screen and (max-width: 720px) {
-	.flex-div {
-		flex-direction: column;
-	}
-	.flex-div > div {
-		width: 100%;
-		padding-bottom: 24px;
-	}
-	main {
-		padding-left: 32px;
-		padding-right: 32px;
-	}
+@media screen and (max-height: 620px) {
+	main > div {
+		margin: 140px auto auto auto;
+	}	
 }

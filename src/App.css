@@ -1,3 +1,19 @@
+:root {
+	--base-color: #1c1b20;
+	--green-dk: #14564B;
+	--green-lt: #1D8171;
+	--blue-dk: #1E4F71;
+	--blue-lt: #2D76AA;
+	--purple-dk: #80114F;
+	--purple-lt: #AA1769;
+	--brown-lt: #B56457;
+	--brown-dk: #884B41;
+	--black-one: #383838;
+	--black-two: #3C3C3B;
+	--gray: #8A8A89;
+	--gray-low-opacity: rgba(138, 138, 136, 0.6);
+	--smoke: #ECF0F1;
+}
 * {
 	box-sizing: border-box;
 }
@@ -5,10 +21,32 @@ body, html {
     padding: 0;
     margin: 0;
 	height: 100%;
-	color: #2e3131;
+	color: var(--base-color);
 }
-a > img {
-    max-width: 100%;
+.background {
+	background-color: #EDF3F7;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	width: 100%;
+	min-height: 100vh;
+	z-index: 0;
+}
+.background-gradient {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	min-height: 100vh;
+	z-index: 1;
+	background: linear-gradient(to bottom right, #F2F0F4, #97A5A6);
+	opacity: 0.6;
+	z-index: 1;
+}
+#root {
+	display: grid;
+	grid-template-columns: 420px 480px auto;
 }
 .fade-in {
 	opacity: 1;
@@ -17,10 +55,13 @@ a > img {
 	animation-timing-function: ease-in;
 	animation-duration: 0.2s;
 }
+.fade-in.slow {
+	animation-duration: 1s;
+	animation-name: fadeInSlow;
+}
 .box-shadow {
 	box-shadow: 0 2px 6px -1px #7f8c8d;
 }
-
 @keyframes fadeInOpacity {
 	0% {
 		opacity: 0;
@@ -28,4 +69,15 @@ a > img {
 	100% {
 		opacity: 1;
 	}
+}
+@keyframes fadeInSlow{
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+hr {
+	color: var(--gray-low-opacity);
 }

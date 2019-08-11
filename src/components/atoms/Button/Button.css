@@ -1,27 +1,54 @@
 /*Button.css*/
 .btn {
-	display: flex;
-	margin: 0 8px;
+	display: block;
 	outline: 1px solid transparent;
 	transition: all ease 0.2s;
 	cursor: pointer;
-	font-family: 'Poppins', sans-serif;
-	border-radius: 1000px;
+	font-family: 'Futura', sans-serif;
+	border-radius: 2px;
 	padding: 8px 24px;
 	border: none;
-    background-color: #117D67;
+    background-color: var(--black-two);
     color: #fff;
-	font-size: 16px;
-    max-width: 200px;
+	font-size: 18px;
 	transition: all ease 0.2s;
 	min-width: 120px;
+	font-weight: 500;
+	text-decoration: none;
+}
+.btn > div {
+	margin: auto;
 }
 .btn:hover {
-	background-color: #16a085;
+	background-color: var(--gray);
 }
 .btn:active, btn:focus {
-	outline: 2px solid #117D67;
+	outline: 2px solid var(--black-one);
 }
-.btn.dark {
-	
+.btn.accent-blue {
+	background-color: var(--blue-lt);
+}
+.btn.accent-blue-dk {
+	background-color: var(--blue-dk);
+}
+.btn.accent-purple {
+	background-color: var(--purple-lt);
+}
+.btn.accent-purple-dk {
+	background-color: var(--purple-dk);
+}
+.btn.accent-green {
+	background-color: var(--green-lt);
+}
+.btn.accent-green-dk {
+	background-color: var(--green-dk);
+}
+.btn.accent-brown {
+	background-color: var(--brown-lt);
+}
+.btn.accent-brown-dk {
+	background-color: var(--brown-dk);
+}
+.btn.stretch {
+	width: 100%;
 }

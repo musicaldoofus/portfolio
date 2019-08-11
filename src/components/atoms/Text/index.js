@@ -1,13 +1,18 @@
 import React from 'react';
 import './Text.css';
 
-const H = ({size, children}) => {
-	
-	if (size === 'xlg') return <h1>{children}</h1>;
-	if (size === 'lg') return <h2>{children}</h2>;
-	if (size === 'md') return <h3>{children}</h3>;
-	if (size === 'sm') return <h4>{children}</h4>;
-	if (size === 'xsm') return <h5>{children}</h5>;
+const H = ({size, children, className}) => {
+	let c;
+	if (size === 'xlg') c = <h1 className={className}>{children}</h1>;
+	if (size === 'lg') c = <h2>{children}</h2>;
+	if (size === 'md') c = <h3>{children}</h3>;
+	if (size === 'sm') c = <h4>{children}</h4>;
+	if (size === 'xsm') c = <h5>{children}</h5>;
+	return (
+		<div className={`header-text${className ? ' ' + className : ''}`}>
+			{c}
+		</div>
+	);
 };
 
 const P = ({size, children, className}) => (

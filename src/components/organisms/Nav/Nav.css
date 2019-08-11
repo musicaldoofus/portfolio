@@ -1,90 +1,45 @@
 /*Nav.css*/
 nav {
-	width: 100%;
-	display: flex;
-	flex-direction: row;
-	background-color: inherit;
-	transition: all ease 0.2s;
-	position: fixed;
-	z-index: 1000;
-	top: 0;
-	left: 0;
-}
-.nav-bar-inner-container {
-	max-width: 64rem;
-	display: flex;
-	flex-grow: 1;
-	margin: 0 auto;
-}
-.nav-bar-inner-container > div {
+	margin: 0 40px;
 	display: grid;
-	grid-template-columns: repeat(5, auto);
-	grid-gap: 16px;
-	margin-left: auto;
+	grid-template-rows: 160px auto 250px auto 68px;
+	z-index: 2;
 }
-
-/*text links*/
-.nav-link {
-	margin: 0;
-	transition: all ease 0.2s;
-	border-bottom: 1px solid transparent;
-	cursor: pointer;
-	opacity: 0.9;
+nav > div:first-child {
+	padding-top: 80px;
+}
+nav a {
 	text-decoration: none;
-	display: flex;
-	width: 64px;
+	color: inherit;
 }
-.nav-link > div {
-	display: flex;
-	width: 100%;
+.nav-link > div > p > span {
+	position: relative;
 }
-.nav-link > div > div {
-	opacity: inherit;
-	margin: auto 8px;
+.nav-link > div > p > span::after {
+    content: "";
+    display: inline-block;
+    height: 0px;
+    width: 0px;
+    background-color: var(--blue-lt);
+    border-radius: 100%;
+    margin-left: 8px;
+	transition: all ease 0.4s;
 }
-.nav-link a {
-	font-family: 'Montserrat';
+.nav-link:hover > div > p > span::after {
+    content: "";
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    background-color: var(--blue-lt);
+    border-radius: 100%;
+    margin-left: 8px;
 }
-.nav-link p {
-	color: #2c3e50;
-	margin: auto;
-}
-.nav-link:hover, .nav-link.active {
-	border-bottom: 1px solid #2c3e50;
-	opacity: 1.0;
-	border-radius: 2px;
-}
-
-/*icon links*/
-.icon {
-	border-radius: 500px;
-	min-width: 40px;
-	min-height: 40px;
-	display: flex;
-	transition: all ease 0.2s;
-}
-.icon > div {
-	width: 40px;
-	margin: auto;
-	height: 40px;
-}
-.icon:hover {
-	transform: scale(1.1);
-}
-.icon > div {
-	transition: all ease 0.2s;
-}
-.icon > div > img {
-	max-width: 100%;
-}
-
-/*nav sizing*/
-.nav.md {
-	height: 64px;
-}
-.nav.sm {
-	height: 40px;
-}
-nav.sm > div > div > .icon > div {
-	width: 24px;
+.nav-link.active> div > p > span::after {
+    content: "";
+    display: inline-block;
+    height: 8px;
+    width: calc(100% - 64px);
+    background-color: var(--blue-lt);
+    border-radius: 1000px;
+    margin-left: 8px;
 }

@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import H, { P } from '../../atoms/Text';
+import Button from '../../atoms/Button';
 import './ProjectCard.css';
 
-const ProjectCard = ({id, imgSrc, title, description}) => {
+const ProjectCard = ({id, to, imgSrc, title, description}) => {
 	return (
 		<Link className="project-card box-shadow" to={`/work/${id}`}>
 			<div className="project-card-img">
@@ -12,6 +13,9 @@ const ProjectCard = ({id, imgSrc, title, description}) => {
 			<div className="project-card-title">
 				<H size="md">{title}</H>
 				<P>{description}</P>
+			</div>
+			<div id="call-to-action">
+				<Button isLink={true} to={to}>See more</Button>
 			</div>
 		</Link>
 	);
