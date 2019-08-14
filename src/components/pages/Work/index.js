@@ -4,16 +4,17 @@ import WorkHome from './WorkHome';
 import WorkPage from './WorkPage';
 
 const Work = (props) => {
+	console.log('w', props);
 	return (
 		<Fragment>
 			<Route
 				exact
 				path={props.match.url}
-				component={WorkHome}
+				render={(p) => <WorkHome handleColorFocusChange={props.handleColorFocusChange} {...props} {...p}/>}
 			/>
 			<Route
 				path={`${props.match.url}/:id`}
-				component={WorkPage}
+				render={(p) => <WorkPage handleColorFocusChange={props.handleColorFocusChange} {...props} {...p}/>}
 			/>
 		</Fragment>
 	);

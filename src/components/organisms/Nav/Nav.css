@@ -1,12 +1,39 @@
 /*Nav.css*/
 nav {
-	margin: 0 40px;
 	display: grid;
-	grid-template-rows: 160px auto 250px auto 68px;
+	grid-template-rows: 96px auto 96px;
+	grid-gap: 32px;
 	z-index: 2;
+	position: relative;
+	/* padding: 80px 40px 0 40px; */
+	transition: all cubic-bezier(.68,-0.55,.27,1.55) 0.4s;
+	border-right: 2px solid var(--gray-low-opacity);
+	border-radius: 2px;
 }
+nav {
+	width: 340px;	
+}
+@media screen-width and (max-width: 900px) {
+	nav {
+		width: 116px;
+	}
+}
+/* nav.collapsed { */
+	/* width: 116px; */
+/* } */
 nav > div:first-child {
-	padding-top: 80px;
+	position: relative;
+	width: calc(100% - 80px);
+    margin: auto auto 0 auto;
+}
+.nav-links {
+	padding-left: 40px;
+    margin: auto 0;
+}
+.collapse-btn {
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 nav a {
 	text-decoration: none;
@@ -42,4 +69,14 @@ nav a {
     background-color: var(--blue-lt);
     border-radius: 1000px;
     margin-left: 8px;
+}
+footer {
+	border-top: 2px solid var(--gray-low-opacity);
+	display: flex;
+	height: 96px;
+	margin-top: auto;
+}
+footer > div {
+	margin: 0 auto;
+	padding: 32px 0;
 }

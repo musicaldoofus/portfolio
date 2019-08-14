@@ -1,10 +1,11 @@
 import React from 'react';
+import Page from '../';
 
-const Resume = ({match}) => {
+const Resume = (props) => {
 	return (
-		<div>
-		
-		</div>
+		<Page colorFocus={props.colorFocus} handleColorFocusChange={props.handleColorFocusChange} className="about">
+			
+		</Page>
 	);
 }
 

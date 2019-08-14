@@ -1,0 +1,22 @@
+/*Background.css*/
+.background {
+	background-color: #EDF3F7;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	width: 100%;
+	min-height: 100vh;
+	z-index: 0;
+}
+.background-gradient {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	min-height: 100vh;
+	z-index: 1;
+	background: linear-gradient(to bottom right, #F2F0F4, #97A5A6);
+	opacity: 0.6;
+	z-index: 1;
+}

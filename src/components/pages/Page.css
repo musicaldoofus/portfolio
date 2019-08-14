@@ -1,17 +1,5 @@
 /*Page.css*/
 .page {
-	position: relative;
-	min-height: 100vh;
-	z-index: 2;
-}
-main {
-    display: flex;
-}
-main > div {
-	margin: auto;
-}
-@media screen and (max-height: 620px) {
-	main > div {
-		margin: 140px auto auto auto;
-	}	
+	width: 560px;
+	padding: 40px;
 }
