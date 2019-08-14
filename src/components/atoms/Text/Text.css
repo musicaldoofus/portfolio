@@ -46,24 +46,6 @@ p.sm {
 p.md {
 	font-size: 20px;
 }
-@media only screen and (max-width: 720px) {
-	h1 {
-		font-size: 40px;
-		line-height: 52px;
-	}
-	h2 {
-		font-size: 32px;
-	}
-	h3 {
-		font-size: 24px;
-	}
-	h4 {
-		font-size: 20px;
-	}
-	h5 {
-		font-size: 18px;
-	}
-}
 p.bold {
 	font-weight: 700;
 }
@@ -100,4 +82,48 @@ hr {
 span > h3 {
     display: inline-block;
     margin-right: 8px;
+}
+
+/*text media queries*/
+@media only screen and (max-width: 830px) {
+	h1 {
+		font-size: 40px;
+		line-height: 52px;
+	}
+	h2 {
+		font-size: 32px;
+	}
+	h3 {
+		font-size: 24px;
+	}
+	h4 {
+		font-size: 20px;
+	}
+	h5 {
+		font-size: 18px;
+	}
+	p {
+		font-size: 14px;
+	}
+}
+@media only screen and (max-width: 570px) and (max-height: 320px) {
+	h1 {
+		font-size: 32px;
+		line-height: 52px;
+	}
+	h2 {
+		font-size: 24px;
+	}
+	h3 {
+		font-size: 20px;
+	}
+	h4 {
+		font-size: 18px;
+	}
+	h5 {
+		font-size: 14px;
+	}
+	p {
+		font-size: 14px;
+	}
 }

@@ -1,5 +1,10 @@
 /*Page.css*/
 .page {
-	width: 560px;
+	max-width: 560px;
 	padding: 40px;
+}
+@media screen and (max-width: 670px) {
+	.page {
+		padding: 16px;
+	}
 }
