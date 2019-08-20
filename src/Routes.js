@@ -19,8 +19,7 @@ const withBrowserRouter = (routes) => (
 );
 
 const Routes = (props) => {
-	const withProps = (C) => <C {...props}/>;
-	const { colorFocus, handleColorFocusChange, children } = props;
+	const { colorFocus, updateColor, children } = props;
 	const r = (
 		<Fragment>
 			{React.Children.map(children, (C) => React.cloneElement(C, {...props}))}
@@ -28,23 +27,23 @@ const Routes = (props) => {
 				<Route
 					exact
 					path="/"
-					render={(props) => <Home colorFocus={colorFocus} handleColorFocusChange={handleColorFocusChange} {...props}/>}
+					render={(props) => <Home colorFocus={colorFocus} updateColor={updateColor} {...props}/>}
 				/>
 				<Route
 					path="/about"
-					render={(props) => <About colorFocus={colorFocus} handleColorFocusChange={handleColorFocusChange} {...props}/>}
+					render={(props) => <About colorFocus={colorFocus} updateColor={updateColor} {...props}/>}
 				/>
 				<Route
 					path="/work"
-					render={(props) => <Work colorFocus={colorFocus} handleColorFocusChange={handleColorFocusChange} {...props}/>}
+					render={(props) => <Work colorFocus={colorFocus} updateColor={updateColor} {...props}/>}
 				/>
 				<Route
 					path="/resume"
-					render={(props) => <Resume colorFocus={colorFocus} handleColorFocusChange={handleColorFocusChange} {...props}/>}
+					render={(props) => <Resume colorFocus={colorFocus} updateColor={updateColor} {...props}/>}
 				/>
 				<Route
 					path="/contact"
-					render={(props) => <Contact colorFocus={colorFocus} handleColorFocusChange={handleColorFocusChange} {...props}/>}
+					render={(props) => <Contact colorFocus={colorFocus} updateColor={updateColor} {...props}/>}
 				/>
 			</Switch>
 		</Fragment>

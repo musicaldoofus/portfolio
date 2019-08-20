@@ -5,9 +5,9 @@ import Button from '../../atoms/Button';
 import './Home.css';
 
 const Home = (props) => {
-	console.log('h', props);
+	// console.log('h', props);
 	return (
-		<Page colorFocus={props.colorFocus} handleColorFocusChange={props.handleColorFocusChange} className="home">
+		<Page className="home">
 			<H size="xlg">
 				Hi there, my name's Michael.
 			</H>

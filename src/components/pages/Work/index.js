@@ -4,7 +4,7 @@ import WorkHome from './WorkHome';
 import WorkPage from './WorkPage';
 
 const Work = (props) => {
-	console.log('w', props);
+	// console.log('w', props);
 	return (
 		<Fragment>
 			<Route

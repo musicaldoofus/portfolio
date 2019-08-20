@@ -10,14 +10,27 @@ nav {
 	border-right: 2px solid var(--gray-low-opacity);
 	border-radius: 2px;
 }
+nav.collapsed {
+	width: 108px;
+}
 nav > div:first-child {
 	position: relative;
 	width: calc(100% - 80px);
     margin: auto auto 0 auto;
 }
 .nav-links {
-	padding-left: 40px;
-    margin: auto 0;
+	height: 12rem;
+	padding-left: 37px;
+    margin: 0;
+}
+a.nav-link {
+    height: 2.4rem;
+    display: flex;
+}
+.nav-link > div {
+    width: 100%;
+    margin: auto;
+	display: flex;
 }
 .collapse-btn {
 	position: absolute;
@@ -27,6 +40,7 @@ nav > div:first-child {
 nav a {
 	text-decoration: none;
 	color: inherit;
+	display: block;
 }
 .nav-link > div > p > span {
 	position: relative;
@@ -41,24 +55,11 @@ nav a {
     margin-left: 8px;
 	transition: all ease 0.4s;
 }
-/* .nav-link:hover > div > p > span::after { */
-    /* content: ""; */
-    /* display: inline-block; */
-    /* height: 8px; */
-    /* width: 8px; */
-    /* background-color: var(--blue-lt); */
-    /* border-radius: 100%; */
-    /* margin-left: 8px; */
-/* } */
-/* .nav-link.active> div > p > span::after { */
-    /* content: ""; */
-    /* display: inline-block; */
-    /* height: 8px; */
-    /* width: calc(100% - 64px); */
-    /* background-color: var(--blue-lt); */
-    /* border-radius: 1000px; */
-    /* margin-left: 8px; */
-/* } */
+.nav-link > div > svg {
+    max-height: 100%;
+    width: 2rem;
+    margin: auto 0;
+}
 
 /*nav media queries*/
 @media screen and (max-width: 900px) {
@@ -69,5 +70,11 @@ nav a {
 @media screen and (max-width: 420px) {
 	nav {
 		width: 60px;
+	}
+	.nav-links {
+		padding-left: 13px;
+	}
+	.collapse-btn {
+		display: none;
 	}
 }

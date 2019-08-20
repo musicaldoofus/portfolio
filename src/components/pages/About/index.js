@@ -5,7 +5,6 @@ import H from '../../atoms/Text';
 import './About.css';
 
 const About = (props) => {
-	console.log('p', props.colorFocus);
 	return (
 		<Page colorFocus={props.colorFocus} handleColorFocusChange={props.handleColorFocusChange} className="about">
 			<div>

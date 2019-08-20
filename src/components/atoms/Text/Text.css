@@ -83,6 +83,9 @@ span > h3 {
     display: inline-block;
     margin-right: 8px;
 }
+a p {
+	margin: 0;
+}
 
 /*text media queries*/
 @media only screen and (max-width: 830px) {

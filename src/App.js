@@ -8,23 +8,33 @@ import './App.css';
 class App extends Component {
 	constructor() {
 		super();
+		const colorFocus = colors.slice()[Math.floor(Math.random() * 4)];
 		this.state = {
-			colorFocus: colors[Math.floor(Math.random() * 4)]
+			colorFocus,
+			remainingColors: colors.slice().filter(c => c.label !== colorFocus.label)
 		};
-		this.handleColorFocusChange = this.handleColorFocusChange.bind(this);
+		this.updateColor = this.updateColor.bind(this);
 	}
 	
-	handleColorFocusChange(color) {
-		console.log(color);
-		this.setState({colorFocus: color});
+	// componentDidMount() {
+		// console.log('mount <App>', this.state);
+	// }
+	
+	updateColor() {
+		const ind = Math.floor(Math.random() * 3)
+		const colorFocus = this.state.remainingColors[ind];
+		const remainingColors = colors.filter(c => c.label !== colorFocus.label);
+		this.setState({
+			colorFocus,
+			remainingColors
+		}, () => console.log(this.state));
 	}
 	
 	render() {
-		// console.log('s', this.state.colorFocus);
 		return (
 			<div className="app">
 				<div className="app-container">
-					<Routes colorFocus={this.state.colorFocus} handleColorFocusChange={this.handleColorFocusChange}>
+					<Routes colorFocus={this.state.colorFocus} updateColor={this.updateColor}>
 						<NavWithRouter/>				
 					</Routes>
 					<Background/>
