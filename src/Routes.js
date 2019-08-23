@@ -5,7 +5,7 @@ import About from './components/pages/About';
 import Resume from './components/pages/Resume';
 import Work from './components/pages/Work';
 import Contact from './components/pages/Contact';
-import CanvasBg from './components/organisms/CanvasBg';
+import Background from './components/atoms/Background';
 
 const withHashRouter = (routes) => (
 	<HashRouter>
@@ -21,11 +21,11 @@ const withBrowserRouter = (routes) => (
 
 const Routes = (props) => {
 	console.log('<Routes>', props);
-	const { colorFocus, updateColor, children } = props;
+	const { colorFocus, prevColorFocus, updateColor, children } = props;
 	const r = (
 		<Fragment>
 			{React.Children.map(children, (C) => React.cloneElement(C, {...props}))}
-			<main className={colorFocus} id="main" role="main">
+			<main className={colorFocus.label} id="main" role="main">
 				<Switch>
 					<Route
 						exact
@@ -49,7 +49,7 @@ const Routes = (props) => {
 						render={(props) => <Contact colorFocus={colorFocus} updateColor={updateColor} {...props}/>}
 					/>
 				</Switch>
-				<CanvasBg/>
+				<Background colorFocus={colorFocus} prevColorFocus={prevColorFocus}/>
 			</main>
 		</Fragment>
 	);

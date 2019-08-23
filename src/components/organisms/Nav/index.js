@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Footer from '../../molecules/Footer';
 import './Nav.css';
@@ -26,8 +26,8 @@ class Nav extends Component {
 	}
 	
 	componentDidUpdate(prevProps) {
-		// console.log('<Nav> update', prevProps, this.props);
-		this.updateColor();
+		console.log('<Nav> update', prevProps, this.props);
+		this.props.onUpdate();
 	}
 	
 	shouldComponentUpdate(prevProps) {
@@ -37,6 +37,11 @@ class Nav extends Component {
 	render() {
 		return (
 			<nav name="navigation bar" role="navigation" id="nav-bar" className={`nav-bar ${this.state.isCollapsed ? 'collapsed' : 'expanded'}`}>
+				<div id="nav-logo">
+				</div>
+				<div id="nav-links">
+					<Link to="/about">/about</Link>
+				</div>
 				<Footer/>
 			</nav>
 		);
