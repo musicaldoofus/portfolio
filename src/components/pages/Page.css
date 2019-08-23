@@ -2,20 +2,26 @@
 .page {
 	max-width: 560px;
 	padding: 40px;
+	z-index: 2;
+	margin: auto;
 }
-/* .fade-in.bottom { */
-	/* background-image: url('../../media/bg-fade-in-img.png'); */
-	/* animation: fadeInBottom 0.8s; */
-	/* height: 100%; */
-/* } */
+.page > div {
+	animation: fadeInBottom 1s;
+	/* animation-delay: 0.6s; */
+	opacity: 1;
+}
+.page h1, .page h2, .page h3 {
+	text-align: center;
+	color: var(--smoke);
+}
 @keyframes fadeInBottom {
 	from {
-		margin-top: 100%;
 		opacity: 0;
+		/* margin-top: 10rem; */
 	}
 	
 	to {
-		margin-top: 0;
+		/* margin-top: 0; */
 		opacity: 1;
 	}
 }

@@ -32,7 +32,7 @@ div.app {
 .app-container {
 	height: 100%;
 	display: grid;
-	grid-template-columns: 340px auto;
+	grid-template-columns: 120px auto;
 }
 .app-container > main, .app-container > nav {
 	overflow: auto;
@@ -40,11 +40,7 @@ div.app {
 main {
 	z-index: 3;
 	position: relative;
-	-webkit-transition: all 1s ease-in;
-	-moz-transition: all 1s ease-in;
-	-o-transition: all 1s ease-in;
-	-ms-transition: all 1s ease-in;
-	transition: all 1s ease-in;
+	display: flex;
 }
 .main-bg {
 	z-index: 2;

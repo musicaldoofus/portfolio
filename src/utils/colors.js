@@ -1,5 +1,15 @@
 const colors = [
 	{
+		label: 'slate-gray',
+		hexDk: '#252627',
+		hexLt: '#37393d'
+		/*
+		css gradient:
+		background: rgb(55,57,61);
+		background: radial-gradient(circle, rgba(55,57,61,1) 33%, rgba(37,38,39,1) 100%);
+		*/
+	},
+	{
 		label: 'green',
 		hexDk: '#14564B',
 		hexLt: '#1D8171'
@@ -37,16 +47,6 @@ const colors = [
 		css gradient:
 		background: rgb(181,100,87);
 		background: radial-gradient(circle, rgba(181,100,87,1) 33%, rgba(136,75,65,1) 100%);
-		*/
-	},
-	{
-		label: 'slate-gray',
-		hexDk: '#252627',
-		hexLt: '#37393d'
-		/*
-		css gradient:
-		background: rgb(55,57,61);
-		background: radial-gradient(circle, rgba(55,57,61,1) 33%, rgba(37,38,39,1) 100%);
 		*/
 	}
 ];

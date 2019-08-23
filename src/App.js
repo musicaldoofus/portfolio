@@ -7,8 +7,9 @@ import './App.css';
 class App extends Component {
 	constructor() {
 		super();
-		const colorFocus = 'slate-gray';
-		const prevColorFocus = 'blue';
+		// const colorFocus = colors[Math.floor(Math.random() * colors.length)];
+		const colorFocus = colors[0];
+		const prevColorFocus = colors[1];
 		this.state = {
 			colorFocus,
 			prevColorFocus

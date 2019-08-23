@@ -38,6 +38,7 @@ class Nav extends Component {
 		return (
 			<nav name="navigation bar" role="navigation" id="nav-bar" className={`nav-bar ${this.state.isCollapsed ? 'collapsed' : 'expanded'}`}>
 				<div id="nav-logo">
+					<Link to="/">MB|LXD</Link>
 				</div>
 				<div id="nav-links">
 					<Link to="/about">/about</Link>
