@@ -3,6 +3,23 @@
 	max-width: 560px;
 	padding: 40px;
 }
+/* .fade-in.bottom { */
+	/* background-image: url('../../media/bg-fade-in-img.png'); */
+	/* animation: fadeInBottom 0.8s; */
+	/* height: 100%; */
+/* } */
+@keyframes fadeInBottom {
+	from {
+		margin-top: 100%;
+		opacity: 0;
+	}
+	
+	to {
+		margin-top: 0;
+		opacity: 1;
+	}
+}
+
 @media screen and (max-width: 670px) {
 	.page {
 		padding: 16px;

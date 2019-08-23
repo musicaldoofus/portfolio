@@ -39,6 +39,11 @@ div.app {
 }
 main {
 	z-index: 3;
+	position: relative;
+}
+main.slate-gray {
+	background: rgb(55,57,61);
+	background: radial-gradient(circle, rgba(55,57,61,1) 33%, rgba(37,38,39,1) 100%);
 }
 .main-bg {
 	z-index: 2;
@@ -61,6 +66,7 @@ hr {
 	color: var(--gray-low-opacity);
 	margin: 0;
 }
+
 
 /*app media queries*/
 @media screen and (max-width: 900px) {

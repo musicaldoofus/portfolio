@@ -18,6 +18,11 @@ const colors = [
 		label: 'brown',
 		hexDk: '#884B41',
 		hexLt: '#B56457'
+	},
+	{
+		label: 'slate-gray',
+		hexDk: '#252627',
+		hexLt: '#37393d'
 	}
 ];
 
