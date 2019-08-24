@@ -7,9 +7,8 @@ import './App.css';
 class App extends Component {
 	constructor() {
 		super();
-		// const colorFocus = colors[Math.floor(Math.random() * colors.length)];
-		const colorFocus = colors[0];
-		const prevColorFocus = colors[1];
+		const colorFocus = colors[Math.floor(Math.random() * colors.length)];
+		const prevColorFocus = colors.filter(color => color.label !== colorFocus.label)[0];
 		this.state = {
 			colorFocus,
 			prevColorFocus

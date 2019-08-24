@@ -9,6 +9,7 @@ nav {
 	border-right: 2px solid var(--gray-low-opacity);
 	border-radius: 2px;
 	font-family: 'Sanchez', serif;
+	background-color: var(--smoke);
 }
 nav.collapsed {
 	width: 108px;

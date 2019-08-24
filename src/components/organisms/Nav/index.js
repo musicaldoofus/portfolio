@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Footer from '../../molecules/Footer';
-// import logo from '../../../media/svg/name-logo-collapsed.svg';
 import './Nav.css';
 
 class Nav extends Component {

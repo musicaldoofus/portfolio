@@ -11,12 +11,6 @@ const About = (props) => {
 				<H size="xlg">
 					About me
 				</H>
-				<H size="lg">
-					I like to work with people.
-				</H>
-				<H size="md">
-					
-				</H>
 			</div>
 		</Page>
 	);

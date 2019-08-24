@@ -6,7 +6,7 @@
 .header-text {
 	max-width: 56rem;
 	text-align: left;
-	color: var(--black-one);
+	color: var(--smoke);
 }
 h1, h2, h3, h4, h5 {
 	margin: 0;
@@ -88,45 +88,45 @@ a p {
 }
 
 /*text media queries*/
-@media only screen and (max-width: 830px) {
-	h1 {
-		font-size: 40px;
-		line-height: 52px;
-	}
-	h2 {
-		font-size: 32px;
-	}
-	h3 {
-		font-size: 24px;
-	}
-	h4 {
-		font-size: 20px;
-	}
-	h5 {
-		font-size: 18px;
-	}
-	p {
-		font-size: 14px;
-	}
-}
-@media only screen and (max-width: 570px) and (max-height: 320px) {
-	h1 {
-		font-size: 32px;
-		line-height: 52px;
-	}
-	h2 {
-		font-size: 24px;
-	}
-	h3 {
-		font-size: 20px;
-	}
-	h4 {
-		font-size: 18px;
-	}
-	h5 {
-		font-size: 14px;
-	}
-	p {
-		font-size: 14px;
-	}
-}
+/* @media only screen and (max-width: 830px) { */
+	/* h1 { */
+		/* font-size: 40px; */
+		/* line-height: 52px; */
+	/* } */
+	/* h2 { */
+		/* font-size: 32px; */
+	/* } */
+	/* h3 { */
+		/* font-size: 24px; */
+	/* } */
+	/* h4 { */
+		/* font-size: 20px; */
+	/* } */
+	/* h5 { */
+		/* font-size: 18px; */
+	/* } */
+	/* p { */
+		/* font-size: 14px; */
+	/* } */
+/* } */
+/* @media only screen and (max-width: 570px) and (max-height: 320px) { */
+	/* h1 { */
+		/* font-size: 32px; */
+		/* line-height: 52px; */
+	/* } */
+	/* h2 { */
+		/* font-size: 24px; */
+	/* } */
+	/* h3 { */
+		/* font-size: 20px; */
+	/* } */
+	/* h4 { */
+		/* font-size: 18px; */
+	/* } */
+	/* h5 { */
+		/* font-size: 14px; */
+	/* } */
+	/* p { */
+		/* font-size: 14px; */
+	/* } */
+/* } */

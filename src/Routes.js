@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { BrowserRouter as Router, HashRouter, Switch, Route, withRouter } from 'react-router-dom';
+import { BrowserRouter as Router, HashRouter, Switch, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
@@ -23,12 +23,20 @@ const withBrowserRouter = (routes) => (
 class Routes extends Component {
 	constructor(props) {
 		super(props);
+		this.state = {
+			mainBoundingRect: null
+		};
+		this.mainRef = React.createRef();
 	}
 	
 	static propTypes = {
 		match: PropTypes.object.isRequired,
 		location: PropTypes.object.isRequired,
 		history: PropTypes.object.isRequired
+	}
+	
+	componentDidMount() {
+		this.setState({mainBoundingRect: this.mainRef.current.getBoundingClientRect()});
 	}
 	
 	render() {
@@ -38,12 +46,12 @@ class Routes extends Component {
 		const r = (
 			<Fragment>
 				{React.Children.map(children, (C) => React.cloneElement(C, {...cloneProps}))}
-				<main className={colorFocus.label} id="main" role="main">
+				<main ref={this.mainRef} className={colorFocus.label} id="main" role="main">
 					<Switch>
 						<Route
 							exact
 							path="/"
-							render={(props) => <Home colorFocus={colorFocus} updateColor={updateColor} {...props}/>}
+							render={(props) => <Home mainBoundingRect={this.state.mainBoundingRect} colorFocus={colorFocus} updateColor={updateColor} {...props}/>}
 						/>
 						<Route
 							path="/about"

@@ -63,6 +63,12 @@ hr {
 	color: var(--gray-low-opacity);
 	margin: 0;
 }
+.cards-container {
+	display: grid;
+	grid-gap: 4rem;
+	width: 100%;
+}
+
 
 /*app media queries*/
 @media screen and (max-width: 900px) {
