@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Footer from '../../molecules/Footer';
+// import logo from '../../../media/svg/name-logo-collapsed.svg';
 import './Nav.css';
 
 class Nav extends Component {
@@ -38,7 +39,9 @@ class Nav extends Component {
 		return (
 			<nav name="navigation bar" role="navigation" id="nav-bar" className={`nav-bar ${this.state.isCollapsed ? 'collapsed' : 'expanded'}`}>
 				<div id="nav-logo">
-					<Link to="/">MB|LXD</Link>
+					<Link to="/">
+						<div>MB | LXD</div>
+					</Link>
 				</div>
 				<div id="nav-links">
 					<Link to="/about">/about</Link>

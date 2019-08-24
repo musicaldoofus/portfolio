@@ -1,7 +1,6 @@
 /*Nav.css*/
 nav {
 	display: grid;
-	width: 340px;
 	grid-template-rows: 96px auto 96px;
 	grid-gap: 32px;
 	z-index: 2;
@@ -9,14 +8,16 @@ nav {
 	transition: all cubic-bezier(.68,-0.55,.27,1.55) 0.4s;
 	border-right: 2px solid var(--gray-low-opacity);
 	border-radius: 2px;
+	font-family: 'Sanchez', serif;
 }
 nav.collapsed {
 	width: 108px;
 }
 nav > div:first-child {
 	position: relative;
-	width: calc(100% - 80px);
-    margin: auto auto 0 auto;
+}
+nav > div:first-child > img {
+	max-height: 100%;
 }
 .nav-links {
 	height: 12rem;
