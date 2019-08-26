@@ -46,16 +46,16 @@ class Page extends Component {
 	
 	setTransitionMargin() {
 		if (this.props.className === 'home') return;
-		console.log(this.state);
 		window.setTimeout(() => this.setState({
 			pageStyle: { margin: '0 auto' }
 		}), 1000);
 	}
 	
 	render() {
-		// console.log('render', this.state);
+		const propsStyle = this.props.style ? this.props.style : {};
+		const style = Object.assign({}, this.state.pageStyle, propsStyle);
 		return (
-			<div ref={this.pageRef} style={this.state.pageStyle ? this.state.pageStyle : {}} className="page">
+			<div ref={this.pageRef} style={style} className="page">
 				{this.props.className === "home" && <FloatingNavBtn style={this.state.navBtnStyleUp ? this.state.navBtnStyleUp : {}} className="up" ref={this.navBtnRef} to="/about" label="about me"/>}
 				<div>{this.props.children}</div>
 			</div>

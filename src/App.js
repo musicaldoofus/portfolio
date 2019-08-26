@@ -19,10 +19,8 @@ class App extends Component {
 	handleUpdateColorFocus() {
 		const prevColorFocus = this.state.colorFocus;
 		const availableColors = colors.filter(color => color.label !== this.state.colorFocus.label);
-		console.log('availableColors', availableColors);
 		const ind = Math.floor(Math.random() * availableColors.length);
 		const colorFocus = availableColors[ind];
-		console.log('handleUpdateColorFocus', colorFocus);
 		this.setState({colorFocus, prevColorFocus});
 	}
 	

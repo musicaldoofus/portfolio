@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, HashRouter, Switch, Route } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Resume from './components/pages/Resume';
@@ -29,18 +28,11 @@ class Routes extends Component {
 		this.mainRef = React.createRef();
 	}
 	
-	static propTypes = {
-		match: PropTypes.object.isRequired,
-		location: PropTypes.object.isRequired,
-		history: PropTypes.object.isRequired
-	}
-	
 	componentDidMount() {
 		this.setState({mainBoundingRect: this.mainRef.current.getBoundingClientRect()});
 	}
 	
 	render() {
-		console.log('<Routes>', this.props);
 		const { colorFocus, prevColorFocus, updateColor, children } = this.props;
 		const cloneProps = { colorFocus, prevColorFocus, updateColor, children };
 		const r = (
