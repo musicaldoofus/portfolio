@@ -1,7 +1,7 @@
 /*Text.css*/
 @font-face {
-	font-family: 'Futura';
-	src: url('./fonts/Futura-Medium.woff');
+	font-family: 'ProximaNova';
+	src: url('./fonts/ProximaNova.woff');
 }
 .header-text {
 	max-width: 56rem;
@@ -37,7 +37,7 @@ h5 {
 }
 p {
 	margin: 0 0 16px 0;
-	font-family: 'Sanchez', serif;
+	font-family: 'ProximaNova';
 	font-size: 18px;
 }
 p.sm {
