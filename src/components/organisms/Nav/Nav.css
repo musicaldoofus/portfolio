@@ -23,14 +23,10 @@ nav > div:first-child {
 nav > div:first-child > img {
 	max-height: 100%;
 }
-.nav-links {
-	height: 12rem;
-	padding-left: 37px;
-    margin: 0;
-}
-a.nav-link {
-    height: 2.4rem;
+#nav-links > a {
+    height: 2em;
     display: flex;
+	/* margin-bottom: 16px; */
 }
 .nav-link > div {
     width: 100%;

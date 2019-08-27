@@ -30,6 +30,8 @@ class Nav extends Component {
 				</div>
 				<div id="nav-links">
 					<Link to="/about">/about</Link>
+					<Link to="/work">/work</Link>
+					<Link to="/resume">/resume</Link>
 				</div>
 				<Footer/>
 			</nav>
