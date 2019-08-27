@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Footer from '../../molecules/Footer';
+import logo from '../../../media/svg/logo.svg';
 import './Nav.css';
 
 class Nav extends Component {
@@ -24,7 +25,7 @@ class Nav extends Component {
 			<nav name="navigation bar" role="navigation" id="nav-bar" className="nav-bar">
 				<div id="nav-logo">
 					<Link to="/">
-						<div>MB | LXD</div>
+						<img src={logo} alt=""/>
 					</Link>
 				</div>
 				<div id="nav-links">

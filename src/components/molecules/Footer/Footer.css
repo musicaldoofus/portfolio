@@ -11,7 +11,6 @@ footer > div {
 }
 footer > div::after {
 	content: "Copyright 2019";
-	font-family: 'ProximaNova';
 }
 nav.collapsed > footer > div::after {
 	content: "\00a9 2019";

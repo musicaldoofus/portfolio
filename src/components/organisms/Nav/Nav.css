@@ -1,8 +1,7 @@
 /*Nav.css*/
 nav {
 	display: grid;
-	grid-template-rows: 96px auto 96px;
-	grid-gap: 32px;
+	grid-template-rows: 118px auto 96px;
 	z-index: 2;
 	position: relative;
 	transition: all cubic-bezier(.68,-0.55,.27,1.55) 0.4s;
@@ -14,8 +13,12 @@ nav {
 nav.collapsed {
 	width: 108px;
 }
+nav > div {
+	padding: 24px;
+}
 nav > div:first-child {
 	position: relative;
+	border-bottom: 2px solid var(--gray-low-opacity);
 }
 nav > div:first-child > img {
 	max-height: 100%;
