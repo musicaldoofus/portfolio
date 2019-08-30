@@ -17,6 +17,7 @@ class Nav extends Component {
 	}
 	
 	shouldComponentUpdate(prevProps) {
+		console.log(prevProps, this.props);
 		return prevProps.location !== this.props.location;
 	}
 	
@@ -28,7 +29,7 @@ class Nav extends Component {
 						<img src={logo} alt=""/>
 					</Link>
 				</div>
-				<div id="nav-links">
+				<div id="nav-links" className={this.props.colorFocus.label}>
 					<Link to="/about">/about</Link>
 					<Link to="/work">/work</Link>
 					<Link to="/resume">/resume</Link>

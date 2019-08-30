@@ -1,8 +1,4 @@
 /*Text.css*/
-@font-face {
-	font-family: 'ProximaNova';
-	src: url('./fonts/ProximaNova.woff');
-}
 .header-text {
 	max-width: 56rem;
 	text-align: left;
@@ -37,7 +33,7 @@ h5 {
 }
 p {
 	margin: 0 0 16px 0;
-	font-family: 'ProximaNova';
+	font-family: 'Open Sans', sans-serif;
 	font-size: 18px;
 }
 p.sm {

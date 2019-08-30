@@ -14,7 +14,7 @@ nav.collapsed {
 	width: 108px;
 }
 nav > div {
-	padding: 24px;
+	padding: 16px;
 }
 nav > div:first-child {
 	position: relative;
@@ -23,36 +23,51 @@ nav > div:first-child {
 nav > div:first-child > img {
 	max-height: 100%;
 }
+#nav-links {
+	min-height: 10em;
+}
 #nav-links > a {
     height: 2em;
     display: flex;
-	/* margin-bottom: 16px; */
-}
-#nav-links {
-	min-height: 10em;
+	text-decoration: none;
+	color: inherit;
+	display: block;
 }
 .collapse-btn {
 	position: absolute;
 	top: 0;
 	right: 0;
 }
-nav a {
-	text-decoration: none;
-	color: inherit;
-	display: block;
-}
 .nav-link > div > p > span {
 	position: relative;
 }
-.nav-link > div > p > span::after {
+#nav-links > a::after {
     content: "";
     display: inline-block;
     height: 0px;
     width: 0px;
-    background-color: var(--blue-lt);
     border-radius: 100%;
     margin-left: 8px;
 	transition: all ease 0.4s;
+}
+#nav-links.blue > a::after {
+    background-color: var(--blue-lt);
+}
+#nav-links.slate-gray > a::after {
+    background-color: var(--slate-gray);
+}
+#nav-links.brown > a::after {
+    background-color: var(--brown-lt);
+}
+#nav-links.purple > a::after {
+    background-color: var(--purple-lt);
+}
+#nav-links.green > a::after {
+    background-color: var(--green-lt);
+}
+#nav-links > a:hover::after {
+	height: 12px;
+	width: 12px;
 }
 .nav-link > div > svg {
     max-height: 100%;
@@ -63,17 +78,13 @@ nav a {
 /*nav media queries*/
 @media screen and (max-width: 900px) {
 	nav {
-		width: 108px;
+		width: 80px;
+		grid-template-rows: 78px auto 96px;
 	}
 }
 @media screen and (max-width: 420px) {
 	nav {
 		width: 60px;
-	}
-	.nav-links {
-		padding-left: 13px;
-	}
-	.collapse-btn {
-		display: none;
+		grid-template-rows: 58px auto 96px;
 	}
 }

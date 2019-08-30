@@ -12,6 +12,7 @@
 	--black-two: #3C3C3B;
 	--gray: #8A8A89;
 	--gray-low-opacity: rgba(138, 138, 136, 0.6);
+	--slate-gray: #37393d;
 	--smoke: #ECF0F1;
 }
 * {
@@ -69,11 +70,10 @@ hr {
 	width: 100%;
 }
 
-
 /*app media queries*/
 @media screen and (max-width: 900px) {
 	.app-container {
-		grid-template-columns: 108px auto;
+		grid-template-columns: 80px auto;
 	}
 }
 @media screen and (max-width: 420px) {
