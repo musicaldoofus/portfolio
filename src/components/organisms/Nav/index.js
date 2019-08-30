@@ -33,6 +33,8 @@ class Nav extends Component {
 					<Link to="/about">/about</Link>
 					<Link to="/work">/work</Link>
 					<Link to="/resume">/resume</Link>
+					<a href="https://github.com/musicaldoofus" target="_blank" rel="noopener noreferrer">github</a>
+					<a href="https://github.com/musicaldoofus" target="_blank" rel="noopener noreferrer">linkedIn</a>
 				</div>
 				<Footer/>
 			</nav>
