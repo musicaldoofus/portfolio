@@ -26,7 +26,7 @@ class Nav extends Component {
 			<nav name="navigation bar" role="navigation" id="nav-bar" className="nav-bar">
 				<div id="nav-logo">
 					<Link to="/">
-						<img src={logo} alt=""/>
+						<img src={logo} alt="logo"/>
 					</Link>
 				</div>
 				<div id="nav-links" className={this.props.colorFocus.label}>
