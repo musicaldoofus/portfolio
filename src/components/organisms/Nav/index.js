@@ -17,7 +17,7 @@ class Nav extends Component {
 	}
 	
 	shouldComponentUpdate(prevProps) {
-		console.log(prevProps, this.props);
+		// console.log(prevProps, this.props);
 		return prevProps.location !== this.props.location;
 	}
 	
