@@ -1,6 +1,7 @@
 /*Footer.css*/
 footer {
 	border-top: 2px solid var(--gray-low-opacity);
+	display: -ms-flexbox;
 	display: flex;
 	height: 96px;
 	margin-top: auto;

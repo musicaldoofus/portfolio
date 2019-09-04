@@ -1,5 +1,6 @@
 /*Nav.css*/
 nav {
+	display: ms-grid;
 	display: grid;
 	grid-template-rows: 118px auto 96px;
 	z-index: 2;
@@ -28,6 +29,7 @@ nav > div:first-child > img {
 }
 #nav-links > a {
     height: 2em;
+	display: -ms-flexbox;
     display: flex;
 	text-decoration: none;
 	color: inherit;

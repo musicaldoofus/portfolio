@@ -21,6 +21,7 @@
 .btn.sm {
 	width: 32px;
 	height: 32px;
+	display: -ms-flexbox;
 	display: flex;
 	justify-content: center;
 	align-items: center;
