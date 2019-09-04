@@ -14,7 +14,7 @@ class Home extends Component {
 	
 	render() {
 		const btnStyle = {
-
+			width: '11.1em'
 		};
 		return (
 			<Page className="home">
