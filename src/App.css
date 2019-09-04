@@ -42,6 +42,7 @@ main {
 	z-index: 3;
 	position: relative;
 	display: flex;
+	min-width: 24em;
 }
 .main-bg {
 	z-index: 2;
