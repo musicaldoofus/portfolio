@@ -32,8 +32,9 @@ div.app {
 }
 .app-container {
 	height: 100%;
+	display: -ms-grid;
 	display: grid;
-	grid-template-columns: 120px auto;
+	grid-template-columns: 7.5em auto;
 }
 .app-container > main, .app-container > nav {
 	overflow: auto;
@@ -66,17 +67,17 @@ hr {
 }
 .cards-container {
 	display: grid;
-	grid-gap: 4rem;
+	grid-gap: 4em;
 	width: 100%;
 }
 
 /*app media queries*/
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 56em) {
 	.app-container {
-		grid-template-columns: 80px auto;
+		grid-template-columns: 5em auto;
 	}
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 26em) {
 	.app-container {
 		grid-template-columns: auto 1fr;
 	}

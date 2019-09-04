@@ -6,13 +6,13 @@
 	transition: all ease 0.4s;
 	cursor: pointer;
 	font-family: 'Sanchez', serif;
-	padding: 12px 24px;
+	padding: 0.75em 1.5em;
 	border: none;
 	background-color: var(--smoke);
 	opacity: 0.7;
     color: var(--black-one);
-	font-size: 18px;
-	min-width: 120px;
+	font-size: 1.125em;
+	min-width: 7.5em;
 	font-weight: 500;
 	text-decoration: none;
 }
@@ -20,8 +20,8 @@
 	margin: auto;
 }
 .btn.sm {
-	width: 32px;
-	height: 32px;
+	width: 2em;
+	height: 2em;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -30,17 +30,17 @@
 	border-radius: 100%;
 }
 .btn.sm > span {
-	margin-top: -4px;
+	margin-top: -0.25em;
 }
 .btn.sm > img {
-	height: 20px;
+	height: 1.125em;
 	transition: all cubic-bezier(.68,-0.55,.27,1.55) 0.6s 0.1s;
 }
 .btn.sm.expanded > img {
-	margin-left: -2px;
+	margin-left: -0.125em;
 }
 .btn.sm.collapsed > img {
-	margin-left: 2px;
+	margin-left: 0.125em;
 	transform: scaleX(-1);
 }
 

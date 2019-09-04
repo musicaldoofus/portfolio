@@ -1,6 +1,6 @@
 /*Text.css*/
 .header-text {
-	max-width: 56rem;
+	max-width: 56em;
 	text-align: left;
 	color: var(--smoke);
 }
@@ -11,43 +11,40 @@ h1, h2, h3, h4, h5 {
 	font-weight: 400;
 }
 h1 {
-	font-size: 64px;
+	font-size: 4em;
 	font-weight: 300;
-	line-height: 80px;
-	margin-bottom: 24px;
+	margin-bottom: 0.2em;
 }
 h2 {
-	font-size: 32px;
-	line-height: 40px;
-	margin-bottom: 32px;
+	font-size: 2em;
+	margin-bottom: 0.2em;
 }
 h3 {
-	font-size: 24px;
-	margin-bottom: 16px;
+	font-size: 1.5em;
 }
 h4 {
-	font-size: 24px;
+	font-size: 1.25em;
 }
 h5 {
-	font-size: 20px;
+	font-size: 1.125em;
 }
 p {
-	margin: 0 0 16px 0;
+	margin: 0 0 1em 0;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 18px;
+	font-size: 1.125em;
 }
 p.sm {
-	font-size: 14px;
+	font-size: 0.8em;
 }
 p.md {
-	font-size: 20px;
+	font-size: 1.25em;
 }
 p.bold {
 	font-weight: 700;
 }
 hr {
 	border-radius: 2px;
-	margin: 24px auto;
+	margin: 1.5em auto;
 }
 .accent-blue {
 	color: var(--blue-lt);
@@ -77,52 +74,50 @@ hr {
 /*special rules*/
 span > h3 {
     display: inline-block;
-    margin-right: 8px;
+    margin-right: 0.5em;
 }
 a p {
 	margin: 0;
 }
 
 /*text media queries*/
- @media only screen and (max-width: 830px) { 
+ @media only screen and (max-width: 52em) { 
 	 h1 { 
-		 font-size: 40px; 
-		 line-height: 52px; 
+		 font-size: 2.5em;
 	 } 
 	 h2 { 
-		 font-size: 32px; 
+		 font-size: 2em;
 	 } 
 	 h3 { 
-		 font-size: 24px; 
+		 font-size: 1.5em;
 	 } 
 	 h4 { 
-		 font-size: 20px; 
+		 font-size: 1.25em;
 	 } 
 	 h5 { 
-		 font-size: 18px; 
+		 font-size: 1.125em;
 	 } 
 	 p { 
-		 font-size: 14px; 
+		 font-size: 0.8em;
 	 } 
  } 
- @media only screen and (max-width: 570px) and (max-height: 320px) { 
+ @media only screen and (max-width: 36em) and (max-height: 20em) { 
 	 h1 { 
-		 font-size: 32px; 
-		 line-height: 52px; 
+		 font-size: 2em;
 	 } 
 	 h2 { 
-		 font-size: 24px; 
+		 font-size: 1.5em; 
 	 } 
 	 h3 { 
-		 font-size: 20px; 
+		 font-size: 1.25em; 
 	 } 
 	 h4 { 
-		 font-size: 18px; 
+		 font-size: 1.125em;
 	 } 
 	 h5 { 
-		 font-size: 14px; 
+		 font-size: 0.8em;
 	 } 
 	 p { 
-		 font-size: 14px; 
+		 font-size: 0.8em;
 	 } 
  } 

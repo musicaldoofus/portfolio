@@ -1,7 +1,7 @@
 /*Nav.css*/
 nav {
 	display: grid;
-	grid-template-rows: 118px auto 96px;
+	grid-template-rows: 7.5em auto 6em;
 	z-index: 2;
 	position: relative;
 	transition: all cubic-bezier(.68,-0.55,.27,1.55) 0.4s;
@@ -10,11 +10,8 @@ nav {
 	font-family: 'Sanchez', serif;
 	background-color: var(--smoke);
 }
-nav.collapsed {
-	width: 108px;
-}
 nav > div {
-	padding: 16px;
+	padding: 1em;
 }
 nav > div:first-child {
 	position: relative;
@@ -71,24 +68,24 @@ nav > div:first-child > img {
 /* } */
 .nav-link > div > svg {
     max-height: 100%;
-    width: 2rem;
+    width: 2em;
     margin: auto 0;
 }
 
 /*nav media queries*/
 @media screen and (max-width: 900px) {
 	nav {
-		width: 80px;
-		grid-template-rows: 78px auto 96px;
+		width: 5em;
+		grid-template-rows: 5em auto 6em;
 	}
 	nav > div {
 		padding: 0.6em;
 	}
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 26em) {
 	nav {
-		width: 60px;
-		grid-template-rows: 58px auto 96px;
+		width: 3.75em;
+		grid-template-rows: 3.75em auto 6em;
 	}
 	nav > div {
 		padding: 0.4em;
