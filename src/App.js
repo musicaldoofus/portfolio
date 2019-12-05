@@ -4,6 +4,8 @@ import ErrorBoundary from './components/molecules/ErrorBoundary';
 import { Container, Row, Col } from 'react-grid-system';
 import Nav from './components/molecules/Nav';
 import './App.css';
+import './typography.css';
+import './media/fonts/geomanist-fonts.css';
 
 const App = () => {
 	return (
@@ -15,7 +17,8 @@ const App = () => {
 							<Nav/>
 						</Col>
 						<Col sm={10}>
-							<header>Hi there, I'm Michael. I build learning solutions that <span className="accent">empower people</span> and <span className="accent">create impact</span>.</header>
+							<header>Hi there, I'm Michael.</header>
+							<h3> I build learning solutions that <span className="accent">empower people</span> and <span className="accent">create impact</span>.</h3>
 						</Col>
 					</Row>
 				</Container>
