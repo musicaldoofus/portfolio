@@ -1,40 +1,27 @@
-import React, { Component } from 'react';
-import Routes from './Routes';
-import NavWithRouter from './components/organisms/Nav';
-import colors from './utils/colors';
+import React from 'react';
+//import Routes from './Routes';
+import ErrorBoundary from './components/molecules/ErrorBoundary';
+import { Container, Row, Col } from 'react-grid-system';
+import Nav from './components/molecules/Nav';
 import './App.css';
 
-class App extends Component {
-	constructor() {
-		super();
-		const colorFocus = colors[Math.floor(Math.random() * colors.length)];
-		const prevColorFocus = colors.filter(color => color.label !== colorFocus.label)[0];
-		this.state = {
-			colorFocus,
-			prevColorFocus
-		};
-		this.handleUpdateColorFocus = this.handleUpdateColorFocus.bind(this);
-	}
-	
-	handleUpdateColorFocus() {
-		const prevColorFocus = this.state.colorFocus;
-		const availableColors = colors.filter(color => color.label !== this.state.colorFocus.label);
-		const ind = Math.floor(Math.random() * availableColors.length);
-		const colorFocus = availableColors[ind];
-		this.setState({colorFocus, prevColorFocus});
-	}
-	
-	render() {
-		return (
-			<div className="app">
-				<div className="app-container">
-					<Routes colorFocus={this.state.colorFocus} prevColorFocus={this.state.prevColorFocus}>
-						<NavWithRouter onUpdate={this.handleUpdateColorFocus}/>				
-					</Routes>
-				</div>
-			</div>
-		);
-	}
+const App = () => {
+	return (
+		<div className="app">
+			<ErrorBoundary>
+				<Container fluid>
+					<Row>
+						<Col sm={2}>
+							<Nav/>
+						</Col>
+						<Col sm={10}>
+							<header>Hi there, I'm Michael. I build learning solutions that <span className="accent">empower people</span> and <span className="accent">create impact</span>.</header>
+						</Col>
+					</Row>
+				</Container>
+			</ErrorBoundary>
+		</div>
+	);
 }
 
 export default App;

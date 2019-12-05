@@ -30,55 +30,6 @@ div.app {
 	margin: 0;
 	padding: 0;
 }
-.app-container {
-	height: 100%;
-	display: -ms-grid;
-	display: grid;
-	grid-template-columns: 7.5em auto;
-}
-.app-container > main, .app-container > nav {
-	overflow: auto;
-}
-main {
-	z-index: 3;
-	position: relative;
-	display: flex;
-}
-.main-bg {
-	z-index: 2;
-}
-.fade-in {
-	opacity: 1;
-	animation-name: fadeInOpacity;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-	animation-duration: 0.2s;
-}
-.fade-in.slow {
-	animation-duration: 1s;
-	animation-name: fadeInSlow;
-}
 .box-shadow {
 	box-shadow: 0 2px 6px -1px #7f8c8d;
-}
-hr {
-	color: var(--gray-low-opacity);
-	margin: 0;
-}
-.cards-container {
-	display: grid;
-	grid-gap: 4em;
-	width: 100%;
-}
-
-/*app media queries*/
-@media screen and (max-width: 56em) {
-	.app-container {
-		grid-template-columns: 5em auto;
-	}
-}
-@media screen and (max-width: 26em) {
-	.app-container {
-		grid-template-columns: auto 1fr;
-	}
 }
