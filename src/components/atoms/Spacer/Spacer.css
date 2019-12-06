@@ -1,0 +1,9 @@
+/*Spacer.css*/
+.spacer {
+    display: block;
+    width: 100%;
+    height: 2em;
+}
+.spacer.lg {
+    height: 4em;
+}

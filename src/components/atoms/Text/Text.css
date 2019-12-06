@@ -1,25 +1,26 @@
 /*Text.css*/
 .text-container {
 	display: block;
+	min-width: 16em;
 	max-width: 56em;
+	overflow: visible;
 }
 header {
     font-size: 3.6em;
-    line-height: 1em;
-    font-family: geomanistbook;
-    margin-bottom: 0.5em;
-    margin-top: -0.1em;
-}
-h1, h2, h3, h4, h5, h6, p {
-    margin: 0;
+    font-family: geomanistlight;
+    margin-bottom: -0.24em;
+    margin-top: -0.24em;
 }
 h3 {
-    font-size: 2.4em;
-    line-height: 1.1em;
-    font-weight: 400;
+    font-size: 2em;
+	margin-top: -0.3em;
+	font-family: geomanistbook;
 }
 p {
 	font-size: 1.2em;
 	line-height: 1em;
 	font-family: geomanistregular;
+}
+.accent {
+	color: var(--green-lt);
 }

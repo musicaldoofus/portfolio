@@ -1,9 +1,0 @@
-/*typography.css*/
-h1, h2, h3, h4, h5, h6, p {
-    margin: 0;
-}
-h3 {
-    font-size: 2.4em;
-    line-height: 1.1em;
-    font-weight: 400;
-}

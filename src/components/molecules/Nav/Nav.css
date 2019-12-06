@@ -7,3 +7,20 @@ nav {
 .nav-brand {
     height: 4em;
 }
+.nav-border {
+    display: block;
+    position: absolute;
+    background-color: var(--gray);
+}
+.nav-border-right {
+    width: 2px;
+    height: 100%;
+    right: 0;
+    top: 0;
+}
+.nav-border-bottom {
+    width: 100%;
+    bottom: 0;
+    height: 2px;
+    margin-left: -0.95em;
+}
