@@ -1,123 +1,25 @@
 /*Text.css*/
-.header-text {
+.text-container {
+	display: block;
 	max-width: 56em;
-	text-align: left;
-	color: var(--smoke);
 }
-h1, h2, h3, h4, h5 {
-	margin: 0;
-	font-family: 'Sanchez', serif;
-	color: inherit;
-	font-weight: 400;
+header {
+    font-size: 3.6em;
+    line-height: 1em;
+    font-family: geomanistbook;
+    margin-bottom: 0.5em;
+    margin-top: -0.1em;
 }
-h1 {
-	font-size: 4em;
-	font-weight: 300;
-	margin-bottom: 0.2em;
-}
-h2 {
-	font-size: 2em;
-	margin-bottom: 0.2em;
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
 }
 h3 {
-	font-size: 1.5em;
-}
-h4 {
-	font-size: 1.25em;
-}
-h5 {
-	font-size: 1.125em;
+    font-size: 2.4em;
+    line-height: 1.1em;
+    font-weight: 400;
 }
 p {
-	margin: 0 0 1em 0;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 1.125em;
+	font-size: 1.2em;
+	line-height: 1em;
+	font-family: geomanistregular;
 }
-p.sm {
-	font-size: 0.8em;
-}
-p.md {
-	font-size: 1.25em;
-}
-p.bold {
-	font-weight: 700;
-}
-hr {
-	border-radius: 2px;
-	margin: 1.5em auto;
-}
-.accent-blue {
-	color: var(--blue-lt);
-}
-.accent-blue-dk {
-	color: var(--blue-dk);
-}
-.accent-purple {
-	color: var(--purple-lt);
-}
-.accent-purple-dk {
-	color: var(--purple-dk);
-}
-.accent-green {
-	color: var(--green-lt);
-}
-.accent-green-dk {
-	color: var(--green-dk);
-}
-.accent-brown {
-	color: var(--brown-lt);
-}
-.accent-brown-dk {
-	color: var(--brown-dk);
-}
-
-/*special rules*/
-span > h3 {
-    display: inline-block;
-    margin-right: 0.5em;
-}
-a p {
-	margin: 0;
-}
-
-/*text media queries*/
- @media only screen and (max-width: 52em) { 
-	 h1 { 
-		 font-size: 2.5em;
-	 } 
-	 h2 { 
-		 font-size: 2em;
-	 } 
-	 h3 { 
-		 font-size: 1.5em;
-	 } 
-	 h4 { 
-		 font-size: 1.25em;
-	 } 
-	 h5 { 
-		 font-size: 1.125em;
-	 } 
-	 p { 
-		 font-size: 0.8em;
-	 } 
- } 
- @media only screen and (max-width: 36em) and (max-height: 20em) { 
-	 h1 { 
-		 font-size: 2em;
-	 } 
-	 h2 { 
-		 font-size: 1.5em; 
-	 } 
-	 h3 { 
-		 font-size: 1.25em; 
-	 } 
-	 h4 { 
-		 font-size: 1.125em;
-	 } 
-	 h5 { 
-		 font-size: 0.8em;
-	 } 
-	 p { 
-		 font-size: 0.8em;
-	 } 
- } 

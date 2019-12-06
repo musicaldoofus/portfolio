@@ -4,7 +4,7 @@ import './Nav.css';
 const Nav = () => {
 	return (
 		<nav className="nav">
-			<span>MB</span>
+			<div className="nav-brand">MB</div>
 		</nav>
 	);
 }
