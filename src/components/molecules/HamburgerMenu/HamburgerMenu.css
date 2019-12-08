@@ -4,10 +4,14 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 20em;
     height: 100%;
     background-color: var(--smoke);
     z-index: 1001;
+    transform: translateX(-100%);
+    transition: transform ease 0.4s;
+}
+.hamburger-menu-panel.mounted {
+    transform: translateX(0);
 }
 .hamburger-menu-overlay {
     display: block;
@@ -18,4 +22,12 @@
     left: 0;
     background-color: var(--gray-low-opacity);
     z-index: 1000;
+    opacity: 0;
+    transition: opacity ease 0.3s;
+}
+.hamburger-menu-overlay.mounted {
+    opacity: 1;
+}
+.hamburger-menu-panel-close-btn {
+    cursor: pointer;
 }
