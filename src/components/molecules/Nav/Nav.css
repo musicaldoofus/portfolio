@@ -5,7 +5,14 @@ nav {
     height: 100%;
 }
 .nav-brand {
-    height: 4em;
+    display: flex;
+    margin: 2em auto;
+    min-width: 2em;
+    max-width: 8em;
+}
+.nav-brand > img {
+    max-height: 100%;
+    width: 100%;
 }
 .nav-border {
     display: flex;
@@ -32,7 +39,6 @@ nav {
 }
 .nav-border-right > div:nth-child(2) {
     width: 0.125em;
-    right: 0.125em;
 }
 .nav-border-bottom {
     flex-direction: column;
@@ -42,9 +48,51 @@ nav {
 }
 .nav-border-bottom > div:first-child {
     height: 0.25em;
-    margin-bottom: 0.25em;
+    margin-bottom: 0.125em;
 }
 .nav-border-bottom > div:nth-child(2) {
     height: 0.125em;
-    margin-bottom: 0.125em;
+}
+
+.nav-menu-hamburger {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    width: 2.625em;
+    height: 2.625em;
+}
+.nav-menu-hamburger-lines {
+    cursor: pointer;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.nav-menu-hamburger-lines > div {
+    display: block;
+    width: 0;
+    height: 0.25em;
+    /*border: 0.0625em solid var(--green-dk);*/
+    border-radius: 0.5em;
+    background-color: var(--green-dk);
+    transition: width ease 0.3s;
+}
+.nav-menu-hamburger-lines > div:nth-child(1) {
+    transition-delay: 0.2s;
+}
+.nav-menu-hamburger-lines > div:nth-child(2) {
+    transition-delay: 0.3s;
+}
+.nav-menu-hamburger-lines > div:nth-child(3) {
+    transition-delay: 0.4s;
+}
+.nav-menu-hamburger-lines.mounted > div {
+    width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+    .nav-brand {
+        margin: 1em auto;
+        max-height: 2.625em;
+    }
 }
