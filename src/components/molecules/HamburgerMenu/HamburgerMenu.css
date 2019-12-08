@@ -30,4 +30,40 @@
 }
 .hamburger-menu-panel-close-btn {
     cursor: pointer;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    display: block;
+    height: 2.625em;
+    width: 2.625em;
+    border: none;
+    background: none;
+}
+.hamburger-menu-panel-close-btn > div {
+    height: 110%;
+    display: block;
+    width: 0.375em;
+    background-color: var(--green-dk);
+    border-radius: 2em;
+    margin: auto;
+    transition: all ease 0.4s;
+ }
+ .hamburger-menu-panel-close-btn > div:first-child {
+    transform: rotate(90deg);
+ }
+ .hamburger-menu-panel-close-btn > div:nth-child(2) {
+    transform: rotate(-90deg);
+    margin-top: -160%;
+ }
+ .hamburger-menu-panel-close-btn.mounted > div:first-child {
+    transform: rotate(45deg);
+ }
+ .hamburger-menu-panel-close-btn.mounted > div:nth-child(2) {
+    transform: rotate(-45deg);
+ }
+.hamburger-menu-panel-body {
+    width: 16em;
+    display: flex;
+    flex-direction: column;
+    margin: 1em auto;
 }
