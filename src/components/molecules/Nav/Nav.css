@@ -18,7 +18,7 @@ nav {
     outline: 1px solid var(--green-dk);
 }
 .nav-brand.mounted {
-    opacity: 100%;
+    opacity: 1;
 }
 .nav-brand > img {
     max-height: 100%;
