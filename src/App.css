@@ -29,6 +29,9 @@ div.app {
 	height: 100vh;
 	margin: 0;
 	padding: 0;
+    background-color: var(--smoke);
+    color: var(--black-one);
+    font-family: geomanistregular, sans-serif;
 }
 .app-container {
 	height: 100%;
