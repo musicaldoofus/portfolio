@@ -45,15 +45,17 @@
     width: 0.375em;
     background-color: var(--green-dk);
     border-radius: 2em;
-    margin: auto;
     transition: all ease 0.4s;
+    top: 0;
+    position: absolute;
+    left: 50%;
  }
  .hamburger-menu-panel-close-btn > div:first-child {
     transform: rotate(90deg);
  }
  .hamburger-menu-panel-close-btn > div:nth-child(2) {
     transform: rotate(-90deg);
-    margin-top: -160%;
+    /*margin-top: -200%;*/
  }
  .hamburger-menu-panel-close-btn.mounted > div:first-child {
     transform: rotate(45deg);

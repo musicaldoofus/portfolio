@@ -30,7 +30,7 @@ const App = () => {
 			<Container fluid style={{height: '100%'}}>
 				<Row style={{height: '100%'}}>
 					<Nav onClick={toggleHamburgerOpen}/>
-					<Col style={{padding: '2em', height: '100%', overflowY: 'scroll'}} sm={10}>
+					<Col style={{padding: '2em', height: '100%', overflowY: 'visible'}} sm={10}>
 						<Row>
 							<Router>
 								<Routes/>
