@@ -8,19 +8,43 @@ nav {
     height: 4em;
 }
 .nav-border {
-    display: block;
+    display: flex;
     position: absolute;
-    background-color: var(--gray);
+}
+.nav-border > div {
+    background-color: var(--green-dk);
+}
+.nav-border-right > div {
+    height: 100%;
+}
+.nav-border-bottom > div {
+    width: 100%;
 }
 .nav-border-right {
-    width: 2px;
+    flex-direction: row;
     height: 100%;
-    right: 0;
     top: 0;
+    right: 0;
+}
+.nav-border-right > div:first-child {
+    width: 0.25em;
+    margin-right: 0.25em;
+}
+.nav-border-right > div:nth-child(2) {
+    width: 0.125em;
+    right: 0.125em;
 }
 .nav-border-bottom {
+    flex-direction: column;
     width: 100%;
     bottom: 0;
-    height: 2px;
-    margin-left: -0.95em;
+    margin-left: -0.95em; /*needed to offset margin from container*/
+}
+.nav-border-bottom > div:first-child {
+    height: 0.25em;
+    margin-bottom: 0.25em;
+}
+.nav-border-bottom > div:nth-child(2) {
+    height: 0.125em;
+    margin-bottom: 0.125em;
 }

@@ -1,23 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, /*HashRouter,*/ Switch, Route } from 'react-router-dom';
-//import Routes from './Routes';
-//import ErrorBoundary from './components/molecules/ErrorBoundary';
-import { Container, Row, Col, Hidden } from 'react-grid-system';
-import Spacer from './components/atoms/Spacer';
+import Root from './components/pages/Root';
+import { Container, Row, Col } from 'react-grid-system';
 import Nav from './components/molecules/Nav';
-import Header, { Body } from './components/atoms/Text';
+import Footer from './components/molecules/Footer';
 import './App.css';
 import './media/fonts/geomanist-fonts.css';
-
-const Root = ({match}) => {
-	return (
-		<Col style={{padding: '2em', height: '100%'}} sm={10}>
-			<Header>Hi there, I'm Michael.</Header>
-			<Spacer/>
-			<Body size="lg"> I build learning solutions that <span className="accent">empower people</span> and <span className="accent">create impact</span>.</Body>
-		</Col>
-	);
-}
 
 const Routes = () => {
 	return (
@@ -37,9 +25,16 @@ const App = () => {
 			<Container fluid style={{height: '100%'}}>
 				<Row style={{height: '100%'}}>
 					<Nav/>
-					<Router>
-						<Routes/>
-					</Router>
+					<Col style={{padding: '2em', height: '100%'}} sm={10}>
+						<Row>
+							<Router>
+								<Routes/>
+							</Router>
+						</Row>
+						<Row>
+							<Footer/>
+						</Row>
+					</Col>
 				</Row>
 			</Container>
 		</div>
