@@ -1,33 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Text.css';
 
-const Header = ({size, children, className}) => {
-	/*
-	let c;
-	if (size === 'xlg') c = <h1 className={className}>{children}</h1>;
-	if (size === 'lg') c = <h2>{children}</h2>;
-	if (size === 'md') c = <h3>{children}</h3>;
-	if (size === 'sm') c = <h4>{children}</h4>;
-	if (size === 'xsm') c = <h5>{children}</h5>;
-	*/
-	return (
-		<div className="text-container">
-			<header>{children}</header>
-		</div>
-	);
-};
+const TextContainer = ({type, size, children}) => {
+	useEffect(() => setMounted(true), []);
+	const [isMounted, setMounted] = useState(false);
 
-const Body = ({size, children, className}) => {
+	const childContainer = type === 'header' ? <header>{children}</header> : (
+		size === 'lg' ? <h3>{children}</h3> : <p>{children}</p>
+	);
 	return (
-		<div className="text-container">
-			{size === 'lg' ?
-				<h3>{children}</h3>
-				: <p>{children}</p>
-			}
+		<div className={`text-container${isMounted ? ' mounted' : ''}`}>
+			{childContainer}
 		</div>
 	);
 }
 
+const Header = ({children}) => <TextContainer type="header" children={children}/>;
+const Body = ({children, size}) => <TextContainer type="body" size={size} children={children}/>;
 const HR = () => <hr/>;
 
 export default Header;

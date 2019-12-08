@@ -9,6 +9,12 @@ nav {
     margin: 2em auto;
     min-width: 2em;
     max-width: 8em;
+    opacity: 0;
+    transition: opacity ease 0.3s;
+    transition-delay: 0.2s;
+}
+.nav-brand.mounted {
+    opacity: 100%;
 }
 .nav-brand > img {
     max-height: 100%;
@@ -18,14 +24,31 @@ nav {
     display: flex;
     position: absolute;
 }
+.nav-border-right > div, .nav-border-bottom > div {
+    transition: all ease 0.8s;
+}
+.nav-border-right > div:first-child, .nav-border-bottom > div:first-child {
+    transition-delay: 0.15s;
+}
+.nav-border-right > div:nth-child(2), .nav-border-bottom > div:nth-child(2) {
+    transition-delay: 0.3s;
+}
 .nav-border > div {
     background-color: var(--green-dk);
+    border-radius: 2em;
 }
 .nav-border-right > div {
-    height: 100%;
+    height: 0;
+}
+.nav-border-right.mounted > div {
+    height: 110%;
 }
 .nav-border-bottom > div {
-    width: 100%;
+    width: 0;
+    margin-left: -1em;
+}
+.nav-border-bottom.mounted > div {
+    width: 110%;
 }
 .nav-border-right {
     flex-direction: row;

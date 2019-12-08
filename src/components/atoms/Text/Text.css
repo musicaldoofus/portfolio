@@ -4,6 +4,13 @@
 	min-width: 16em;
 	max-width: 56em;
 	overflow: visible;
+	opacity: 0;
+	transform: translateY(-0.5em);
+	transition: transform ease 0.4s, opacity ease 1s;
+}
+.text-container.mounted {
+	opacity: 1;
+	transform: translateY(0);
 }
 header {
     font-size: 3.6em;
