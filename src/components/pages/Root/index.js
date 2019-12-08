@@ -6,12 +6,12 @@ import Spacer from '../../atoms/Spacer';
 const Root = ({match}) => {
 	return (
 		<div className="page root">
-			<Col xs={12} sm={6}>
+			<Col sm={12} md={6}>
 				<Header>Hi there, I'm Michael.</Header>
 				<Spacer/>
 				<Body size="lg"> I build learning solutions that <span className="accent">empower people</span> and <span className="accent">create impact</span>.</Body>
 			</Col>
-			<Col xs={12} sm={6}>
+			<Col sm={12} md={6}>
 				
 			</Col>
 		</div>

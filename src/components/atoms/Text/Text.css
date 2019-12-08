@@ -25,7 +25,16 @@ p {
 	color: var(--green-lt);
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 824px) {
+	header {
+		font-size: 2.6em;
+	}
+	h3 {
+		font-size: 1.8em;
+	}
+}
+/*
+@media screen and (max-width: 676px) {
 	header {
 		font-size: 2em;
 	}
@@ -33,3 +42,4 @@ p {
 		font-size: 1.2em;
 	}
 }
+*/
