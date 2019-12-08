@@ -1,40 +1,47 @@
-import React, { Component } from 'react';
-import Routes from './Routes';
-import NavWithRouter from './components/organisms/Nav';
-import colors from './utils/colors';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, /*HashRouter,*/ Switch, Route } from 'react-router-dom';
+import Root from './components/pages/Root';
+import { Container, Row, Col } from 'react-grid-system';
+import Nav from './components/molecules/Nav';
+import HamburgerMenu from './components/molecules/HamburgerMenu';
+//import Footer from './components/molecules/Footer';
 import './App.css';
+import './media/fonts/geomanist-fonts.css';
 
-class App extends Component {
-	constructor() {
-		super();
-		const colorFocus = colors[Math.floor(Math.random() * colors.length)];
-		const prevColorFocus = colors.filter(color => color.label !== colorFocus.label)[0];
-		this.state = {
-			colorFocus,
-			prevColorFocus
-		};
-		this.handleUpdateColorFocus = this.handleUpdateColorFocus.bind(this);
-	}
-	
-	handleUpdateColorFocus() {
-		const prevColorFocus = this.state.colorFocus;
-		const availableColors = colors.filter(color => color.label !== this.state.colorFocus.label);
-		const ind = Math.floor(Math.random() * availableColors.length);
-		const colorFocus = availableColors[ind];
-		this.setState({colorFocus, prevColorFocus});
-	}
-	
-	render() {
-		return (
-			<div className="app">
-				<div className="app-container">
-					<Routes colorFocus={this.state.colorFocus} prevColorFocus={this.state.prevColorFocus}>
-						<NavWithRouter onUpdate={this.handleUpdateColorFocus}/>				
-					</Routes>
-				</div>
-			</div>
-		);
-	}
+const Routes = () => {
+	return (
+		<Switch>
+			<Route
+				exact
+				path="/"
+				component={Root}
+			/>
+		</Switch>
+	);
+}
+
+const App = () => {
+	const [isHamburgerOpen, setHamburgerOpen] = useState(false);
+
+	const toggleHamburgerOpen = () => setHamburgerOpen(!isHamburgerOpen);
+
+	return (
+		<div className="app">
+			<Container fluid style={{height: '100%'}}>
+				<Row style={{height: '100%'}}>
+					<Nav onClick={toggleHamburgerOpen}/>
+					<Col style={{padding: '2em', height: '100%', overflowY: 'visible'}} sm={10}>
+						<Row>
+							<Router>
+								<Routes/>
+							</Router>
+						</Row>
+					</Col>
+				</Row>
+			</Container>
+			{isHamburgerOpen && <HamburgerMenu onClick={toggleHamburgerOpen}/>}
+		</div>
+	);
 }
 
 export default App;

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import FloatingNavBtn from '../atoms/FloatingNavBtn';
 import './Page.css';
 
 class Page extends Component {
@@ -15,7 +14,6 @@ class Page extends Component {
 			transitionComplete: false
 		};
 		this.pageRef = React.createRef();
-		this.navBtnRef = React.createRef();
 		this.setTransitionMargin = this.setTransitionMargin.bind(this);
 		this.updateNavBtnStyle = this.updateNavBtnStyle.bind(this);
 	}
@@ -56,7 +54,6 @@ class Page extends Component {
 		const style = Object.assign({}, this.state.pageStyle, propsStyle);
 		return (
 			<div ref={this.pageRef} style={style} className="page">
-				{this.props.className === "home" && <FloatingNavBtn style={this.state.navBtnStyleUp ? this.state.navBtnStyleUp : {}} className="up" ref={this.navBtnRef} to="/about" label="about me"/>}
 				<div>{this.props.children}</div>
 			</div>
 		);

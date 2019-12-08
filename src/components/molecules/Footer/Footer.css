@@ -1,19 +1,19 @@
 /*Footer.css*/
 footer {
+<<<<<<< HEAD
 	border-top: 2px solid var(--gray-low-opacity);
 	display: -ms-flexbox;
+=======
+	border-top: 0.125em solid var(--green-dk);
+>>>>>>> development
 	display: flex;
-	height: 96px;
-	margin-top: auto;
+	height: 2em;
+	width: 100%;
 }
 footer > div {
 	margin: 0 auto;
-	padding: 32px 0;
 }
 footer > div::after {
-	content: "\00a9 2019";
-}
-nav.collapsed > footer > div::after {
 	content: "\00a9 2019";
 }
 

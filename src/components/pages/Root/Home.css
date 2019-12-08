@@ -1,0 +1,9 @@
+/*Home.css*/
+#home-btns {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 2em;
+}
