@@ -32,7 +32,7 @@ const Nav = () => {
 				<ul>
 					{navLinks.map(({to, label}) => (
 						<li key={to}>
-							<Link to={to}>{label}</Link>
+							<Link to={to} aria-current="page">{label}</Link>
 						</li>
 					))}
 				</ul>

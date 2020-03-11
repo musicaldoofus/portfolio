@@ -6,7 +6,7 @@ import './App.css';
 const App = () => {
 	const [showIntroAnim, setShowIntroAnim] = useState(true);
 
-	const animationDuration = 3000;
+	const animationDuration = 1500;
 
 	useEffect(() => {
 		//window.scrollTo(0, 0);

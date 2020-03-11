@@ -1,0 +1,5 @@
+/*Blog.css*/
+
+.blog-post, .blog-root {
+    overflow-y: scroll;
+}
