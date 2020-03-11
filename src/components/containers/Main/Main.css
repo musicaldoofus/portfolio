@@ -9,6 +9,13 @@ main {
     font-size: 15px;
     margin-bottom: 0;
     margin-top: 0;
+}
+
+main > div {
+    padding-right: calc(100% - 55em);
+}
+
+main.blog {
     overflow: hidden;
 }
 

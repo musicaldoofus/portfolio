@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Main from '../../containers/Main';
 import Stub from '../../molecules/Stub';
 import './Blog.css';
@@ -110,7 +111,7 @@ const blogPosts = [
 
 const BlogRoot = () => {
     return (
-        <Main>
+        <Main cName="blog">
             <div className="blog-root">
                 <div>
                     <header>
@@ -132,7 +133,7 @@ const BlogPost = ({match}) => {
     const post = blogPosts.filter(b => b.stubId === match.params.stubId)[0];
 
     if (!match.params || !match.params.hasOwnProperty('stubId') || !post) return (
-        <Main>
+        <Main cName="blog">
             <div>
                 <h2>Oops.</h2>
                 <p>Looks like that post doesn't exist.</p>
@@ -143,11 +144,13 @@ const BlogPost = ({match}) => {
     const {title, postedDate, duration, description, markupContent} = post;
 
     return (
-        <Main>
+        <Main cName="blog">
             <div className="blog-post">
                 <div>
-                    <header>
+                    <Link to="/blog">
                         <h1 className="header-small muted">/ Blog</h1>
+                    </Link>
+                    <header>
                         <h2>{title}</h2>
                     </header>
                     <div>
