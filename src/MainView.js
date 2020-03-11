@@ -3,9 +3,12 @@ import Router from './Router';
 import { Row, Col } from 'react-grid-system';
 
 const MainView = () => {
+	const fullHeight = {
+		height: '100%'
+	};
 	return (
-		<Col style={{padding: '2em', height: '100%', overflowY: 'visible'}} sm={10}>
-			<Row>
+		<Col style={{padding: '2em'}} sm={10}>
+			<Row style={fullHeight}>
 				<Router/>
 			</Row>
 		</Col>

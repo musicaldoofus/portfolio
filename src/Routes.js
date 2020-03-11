@@ -1,5 +1,5 @@
 import React from 'react';
-import Root from './components/pages/Root';
+import Root from './components/views/Root';
 import { Switch, Route } from 'react-router-dom';
 
 const Routes = () => {

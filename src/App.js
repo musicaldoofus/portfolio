@@ -1,25 +1,30 @@
-import React, { useState } from 'react';
-import { Container, Row } from 'react-grid-system';
-import Nav from './components/molecules/Nav';
-import HamburgerMenu from './components/molecules/HamburgerMenu';
-import MainView from './MainView';
+import React, { useState, useEffect } from 'react';
+import Router from './Router';
+import Footer from './components/molecules/Footer';
 import './App.css';
-import './media/fonts/geomanist-fonts.css';
 
 const App = () => {
-	const [isHamburgerOpen, setHamburgerOpen] = useState(false);
+	const [showIntroAnim, setShowIntroAnim] = useState(true);
 
-	const toggleHamburgerOpen = () => setHamburgerOpen(!isHamburgerOpen);
+	const animationDuration = 3000;
+
+	useEffect(() => {
+		//window.scrollTo(0, 0);
+
+		window.setTimeout(() => {
+			setShowIntroAnim(false);
+		}, animationDuration);
+	}, []);
 
 	return (
 		<div className="app">
-			<Container fluid style={{height: '100%'}}>
-				<Row style={{height: '100%'}}>
-					<Nav onClick={toggleHamburgerOpen}/>
-					<MainView/>
-				</Row>
-			</Container>
-			{isHamburgerOpen && <HamburgerMenu onClick={toggleHamburgerOpen}/>}
+			{showIntroAnim && (
+				<div className="intro-line-container">
+					<div className="intro-line"></div>
+				</div>
+			)}
+			<Router/>
+			<Footer/>
 		</div>
 	);
 }
