@@ -9,14 +9,36 @@ main {
     font-size: 15px;
     margin-bottom: 0;
     margin-top: 0;
+    transition: opacity ease 0.4s;
+}
+
+main>div.page.about, main>div.page.blog {
+    overflow-y: scroll;
+}
+
+main.initial {
+    opacity: 0;
+}
+
+main.active {
+    opacity: 1;
 }
 
 main > div {
     padding-right: calc(100% - 55em);
 }
 
-main.blog {
+main {
     overflow: hidden;
+}
+
+.page {
+    opacity: 1;
+    transition: opacity ease 0.4s;
+}
+
+.page.inactive {
+    opacity: 0;
 }
 
 /*media queries*/

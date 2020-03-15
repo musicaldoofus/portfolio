@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Router from './Router';
-import Footer from './components/molecules/Footer';
 import './App.css';
 
 const App = () => {
@@ -24,7 +23,6 @@ const App = () => {
 				</div>
 			)}
 			<Router/>
-			<Footer/>
 		</div>
 	);
 }

@@ -1,10 +1,17 @@
 /*Stub.css*/
 
 .stub {
-    padding-bottom: 1em;
-    box-shadow: 0px 11px 15px -16px
-    rgba(0, 0, 0, 0.2);
-    cursor: pointer;
+    padding: 0.5em 2em;
+
+cursor: pointer;
+
+border: 1px solid var(--smoke-lt);
+
+border-radius: 2px;
+
+margin-bottom: 1em;
+
+margin-right: 0.5em;
 }
 
 .stub > a {
@@ -13,4 +20,8 @@
     display: block;
     height: 100%;
     width: 100%;
+}
+
+.stub:hover {
+    background-color: var(--smoke-lt);
 }
