@@ -16,7 +16,7 @@ const Footer = () => {
 		<footer id="footer" role="contentinfo" className={`${boxShadow ? 'box-shadow' : 'initial'}`}>
 			<span>Copryight 2020 Michael Burns</span>
 		</footer>
-	)
+	);
 };
 
 export default Footer;

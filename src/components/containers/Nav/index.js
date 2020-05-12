@@ -1,29 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import navLinks from './navLinks';
 import './Nav.css';
-
-const navLinks = [
-	{
-		to: '/',
-		label: 'Home'
-	},
-	{
-		to: '/about',
-		label: 'About'
-	},
-	{
-		to: '/work',
-		label: 'Work'
-	},
-	{
-		to: '/blog',
-		label: 'Blog'
-	},
-	{
-		to: '/contact',
-		label: 'Contact'
-	}
-];
 
 const Nav = () => {
 	return (

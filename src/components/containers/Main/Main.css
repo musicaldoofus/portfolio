@@ -10,6 +10,7 @@ main {
     margin-bottom: 0;
     margin-top: 0;
     transition: opacity ease 0.4s;
+    /*position: relative;*/
 }
 
 main>div.page.about, main>div.page.blog {

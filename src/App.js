@@ -8,8 +8,6 @@ const App = () => {
 	const animationDuration = 1500;
 
 	useEffect(() => {
-		//window.scrollTo(0, 0);
-
 		window.setTimeout(() => {
 			setShowIntroAnim(false);
 		}, animationDuration);
