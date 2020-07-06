@@ -1,0 +1,27 @@
+/*Stub.css*/
+
+.stub {
+    padding: 0.5em 2em;
+
+cursor: pointer;
+
+border: 1px solid var(--smoke-lt);
+
+border-radius: 2px;
+
+margin-bottom: 1em;
+
+margin-right: 0.5em;
+}
+
+.stub > a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.stub:hover {
+    background-color: var(--smoke-lt);
+}

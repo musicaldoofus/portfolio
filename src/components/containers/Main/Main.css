@@ -1,0 +1,59 @@
+/*Main.css*/
+
+main {
+	z-index: 1;
+    display: flex;
+    flex-direction: column;
+	height: 100%;
+    min-width: 26em;
+    font-size: 15px;
+    margin-bottom: 0;
+    margin-top: 0;
+    transition: opacity ease 0.4s;
+    /*position: relative;*/
+}
+
+main>div.page.about, main>div.page.blog {
+    overflow-y: scroll;
+}
+
+main.initial {
+    opacity: 0;
+}
+
+main.active {
+    opacity: 1;
+}
+
+main > div {
+    padding-right: calc(100% - 55em);
+}
+
+main {
+    overflow: hidden;
+}
+
+.page {
+    opacity: 1;
+    transition: opacity ease 0.4s;
+}
+
+.page.inactive {
+    opacity: 0;
+}
+
+/*media queries*/
+
+@media (max-width: 812px) {
+    main {
+        font-size: 13px;
+        padding-right: 1em;
+    }
+}
+
+@media (max-width: 670px) {
+    main {
+        font-size: 11px;
+        min-width: 20em;
+    }
+}

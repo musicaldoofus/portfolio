@@ -1,0 +1,43 @@
+/*Root.css*/
+
+.page.root {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.accent-block-expanded {
+    position: absolute;
+    transition: all ease 0.4s;
+}
+
+.accent-block-expanded.blue {
+    background-color: var(--blue);
+}
+
+.accent-block-expanded.pink {
+    background-color: var(--pink);
+}
+
+.accent-block-close-btn {
+    position: absolute;
+    display: block;
+    width: 8em;
+    height: 4em;
+    border-radius: 1000px;
+    border: 1px solid var(--gray-dk);
+    background-color: transparent;
+    color: var(--gray-dk);
+    cursor: pointer;
+    transition: all ease 0.2s;
+    opacity: 1;
+}
+
+.accent-block-close-btn::after {
+    content: '\2193';
+    padding-left: 1em;
+}
+
+.page.root h1 {
+    font-size: 3em;
+}
